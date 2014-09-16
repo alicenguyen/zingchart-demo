@@ -9,11 +9,10 @@ var moment = require('moment');
 moment().format();
 
 var chartSchema = new mongoose.Schema({
-  	_id: Number,
+  	zingId: Number,
 	name: String,
 	data: String,
-	created: Date,
-	zingId: Number
+	created: Date
  });
 
 var Chart = mongoose.model('Chart', chartSchema);
@@ -25,7 +24,7 @@ mongoose.connect('localhost');
 
 var app = express();
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3333);
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
@@ -56,10 +55,10 @@ app.get('/api/charts/:id', function(req, res) {
 // POST a Chart =============================================
 app.post('/api/postchart', function(req, res, next) {
 	var chart = new Chart({
+		zingId: 	req.body.zingId,
 		name: 		req.body.name,
 		data: 		req.body.data,
-		created: 	req.body.created,
-		zingId: 	req.body.zing
+		created: 	req.body.created
 	});
 	chart.save(function(err) {
 		if (err) return next(err);

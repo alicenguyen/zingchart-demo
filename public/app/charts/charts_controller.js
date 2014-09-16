@@ -78,8 +78,9 @@ angular.module('zingClient')
 
 		$scope.openChart = function (chart) {
 
-			chart = chart || {_clientId: $scope.clientId};
+			//chart = chart || {_clientId: $scope.clientId};
 
+			chart = '{"graphset":[]}';
 			$materialDialog({
 					templateUrl: '/app/charts/views/details.html',
 					controller: 'ChartInstanceCtrl',
