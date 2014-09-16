@@ -6,8 +6,8 @@ angular.module('zingClient')
 			$('#sidebar').hide();
 			
 			// UNCOMMENT THIS! Had server connection issues so i'm using dummy data for now
-			// $scope.chart = Charts.query($stateParams);
-			// $scope.code =  $scope.chart.data;
+		//	$scope.chart = Charts.query($stateParams);
+		//	$scope.code =  $scope.chart.data;
 			$scope.chart = _charts[1];
 			$scope.code =  $scope.chart.data;
 			$scope.aceLoad = function(_editor) {

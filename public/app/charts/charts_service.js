@@ -1,13 +1,13 @@
 angular.module('zingClient')
 
 .factory('Charts', ['$resource', function($resource) {
-		return $resource('/api/chart/:id', {id : "@zingId"},
+		return $resource('/api/charts/:id', {id : "@zingId"},
 			{
-				'update': {url: '/api/chart/:id/key/:key', method: 'PUT', isArray:true},
+				'update': {url: '/api/charts/:id/', method: 'PUT', isArray:true},
 				'get':    {method:'GET'},
 				'save':   {method:'POST', isArray:true},
 				'query':  {method:'GET', isArray:true},
-				'remove': {url: '/api/chart/:id/key/:key', method:'DELETE', isArray:true}
+				'remove': {url: '/api/charts/:id/', method:'DELETE', isArray:true}
 		});
 }]);
 
@@ -195,7 +195,7 @@ var data1 = {
                 "values":[15],
                 "background-color":"#57dce5",
                 "border-color":"#454754",
-                "border-width":"1px",
+								"border-width":"1px",
                 "shadow":0,
                 "tooltip":{
                     "background-color":"#54ced4",

@@ -6,8 +6,8 @@ angular.module('zingClient')
 				$('#chart_preview').height(height);
 				// center rendered chart inner container
 		// UNCOMMENT THIS! Had server connection issues so i'm using dummy data for now
-	//	$scope.charts = Charts.query({clientId: $scope.clientId});
-		$scope.charts = _charts;
+		$scope.charts = Charts.query().concat(_charts);
+
 
 		$scope.aceLoaded = function(_editor) {
 			// Editor part
@@ -89,7 +89,7 @@ angular.module('zingClient')
 
 }])
 
-.controller('ChartInstanceCtrl', ['$scope', 'Charts', 'chart', 'clientKey', 'parentScope', '$hideDialog', function ($scope, Charts, chart, clientKey, parentScope, $hideDialog) {
+.controller('ChartInstanceCtrl', ['$scope','$state', 'Charts', 'chart', 'clientKey', 'parentScope', '$hideDialog', '_charts', function ($scope, $state,Charts, chart, clientKey, parentScope, $hideDialog, _charts) {
 
 		$scope.charts = {};
 		$scope.charts.imageFormats = ['png','jpg','tiff', 'webp'];
@@ -100,6 +100,7 @@ angular.module('zingClient')
 			{name:'Bottom Right', value: 'bottom-right'}, {name: 'Bottom Left', value:'bottom-left'}];
 		$scope.charts.encodings = ['base64', 'binary'];
 		$scope.chart = angular.copy(chart);
+
 		$scope.add = function () {
 			Charts.save($scope.chart, function(data){
 				parentScope.charts = data;
@@ -110,10 +111,14 @@ angular.module('zingClient')
 				$hideDialog();
 			});
 		};
+
 		$scope.save = function () {
 			Charts.update({key: clientKey}, $scope.chart, function(data){
 				parentScope.charts = data;
 				$hideDialog();
+				_charts.push($scope.chart);
+				var _chart = $scope.chart;
+				$state.go("client.editor.ide({zingId: '{{_chart.zingId}}'}");
 			},
 			function(error) {
 				console.log(error);

@@ -4,7 +4,7 @@ angular.module('zingClient', ['ui.router', 'ngResource', 'ui.bootstrap', 'ngMate
 .config(function($stateProvider, $urlRouterProvider) {
 	//
 	// For any unmatched url, redirect to /state1
-	$urlRouterProvider.otherwise("/admin");
+	$urlRouterProvider.otherwise("/client/53627de45f3971e202ffe41f/charts");
 	//
 	$urlRouterProvider.when('/admin', '/admin/clients/list');
 	// Now set up the states
@@ -12,8 +12,7 @@ angular.module('zingClient', ['ui.router', 'ngResource', 'ui.bootstrap', 'ngMate
 	.state('admin', {
 			url: "/admin",
 			abstract:true,
-			templateUrl: "/app/admin/views/home.html",
-			controller: 'AdminCtrl'
+			templateUrl: "/app/admin/views/home.html"
 	})
 	.state('admin.clientsList', {
 			url: "/clients/list",
