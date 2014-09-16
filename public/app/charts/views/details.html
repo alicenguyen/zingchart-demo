@@ -1,0 +1,72 @@
+<material-dialog style="width:800px;height:550px;">
+   <material-toolbar class="material-theme-dark">
+        <div class="material-toolbar-tools">
+          <span class="material-flex">Chart Form</span>
+        </div>
+    </material-toolbar>
+  <div class="dialog-content" style="height:550px;">
+        <form name="chartForm">    
+        
+                <div style="border:1px solid #3f51b5;">
+                   <material-tabs selected="selectedIndex">
+                        <material-tab label="General"></material-tab>
+                        <material-tab label="JSON"></material-tab>
+                        <material-tab label="Default Renders"></material-tab>
+                   </material-tabs>
+                
+                   <div  ng-switch on="selectedIndex" class="tabs-content">
+                        <div ng-switch-when="0">
+                            <material-input-group class="material-input-group-theme-zing">
+                                <label for="chartName">Chart Name</label>
+                                <material-input id="chartName" name="chartName" type="text" ng-model="chart.name">
+                            </material-input-group>
+                            <material-input-group class="material-input-group-theme-zing">
+                              <label for="chartKeywords">Keywords</label>
+                              <material-input type="text" id="chartKeywords" ng-model="chart.keywords">
+                            </material-input-group>
+                            <div class="material-input-group-theme-zing">
+                              <label for="chartWidth">Width</label>
+                              <material-input type="range"  id="chartWidth" min="10" max="1000" ng-model="chart.width">
+                            </div>
+                            <div class="material-input-group-theme-zing">
+                              <label for="chartHeight">Height</label>
+                              <material-input type="range" id="chartHeight" min="10" max="1000" ng-model="chart.height">
+                            </div>
+                        </div>
+                        <div ng-switch-when="1">
+                                <textarea rows="15" style="width:100%" ng-model="chart.data"></textarea>
+                        </div>
+                        <div ng-switch-when="2">
+                            <div class="material-input-group-theme-zing">
+                                <label for="chartOuput">Output Type</label>
+                                <select class="form-control" ng-model="chart.output" ng-options="output.value as output.name for output in charts.outputs"></select>
+                            </div>
+                            <div class="material-input-group-theme-zing" ng-show="chart.output === 'img'">
+                                <label for="chartImage">Image Format</label>
+                                <select class="form-control" ng-model="chart.image_format" ng-options="format for format in charts.imageFormats"></select>
+                            </div>
+                            <div class="material-input-group-theme-zing">
+                                <label for="chartWatermarkType">Watermark Type</label>
+                                <select class="form-control" ng-model="chart.watermark_type" ng-options="type.value as type.name for type in charts.watermarkTypes"></select>
+                            </div>
+                            <div class="material-input-group-theme-zing">
+                                <label for="chartWatermarkPosition">Watermark Positions</label>
+                                <select class="form-control" ng-model="chart.watermark_position" ng-options="position.value as position.name for position in charts.watermarkPositions"></select>
+                            </div>
+                            <div class="material-input-group-theme-zing">
+                                <label for="chartEncoding">Encoding</label>
+                                <select class="form-control" ng-model="chart.encoding" ng-options="encoding for encoding in charts.encodings"></select>
+                            </div> 
+                        </div>
+                   </div>
+                </div>
+        </form>
+        
+  </div>
+  <div class="dialog-actions" layout="horizontal" layout-align="end">
+        <material-button ng-click="save()" ng-show="chart._id"><i class="icon-white glyphicon glyphicon-plus"></i> Save</material-button>
+        <material-button ng-click="add()" type="submit" ng-show="!chart._id"> Add</material-button>
+        <material-button ng-click="cancel()" >Cancel</material-button>
+  </div>
+</material-dialog>
+      
