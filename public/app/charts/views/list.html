@@ -47,7 +47,7 @@
 								<i class="glyphicon glyphicon-play"></i>
 							</small></h3>
 						<p class="info"> {{chart.created | date}} </p>
-						<div id='{{chart.id}}' class="ace-editor" ng-model=chart.data readonly="true" ui-ace="{ 
+						<div ui-sref="client.editor.ide({zingId: '{{chart.zingId}}'})" id='{{chart.id}}' class="ace-editor" ng-model=chart.data readonly="true" ui-ace="{ 
 								useWrapMode : true, 
 								showGutter: false,
 								theme:'katzenmilch',
