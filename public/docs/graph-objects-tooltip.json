@@ -1,0 +1,457 @@
+{
+    "name": "tooltip",
+    "type": "graph-objects",
+    "desc": "Sets the definition for the graph's tooltip object.",
+    "attrs": [
+        {
+            "name": "html-modehtmlMode",
+            "type": "Boolean",
+            "desc": "Sets whether the tooltip is rendered using just the html DIV element/s instead of render specific elements. This is useful when complex",
+            "example": "html code needs to be rendered inside the tooltip, however, it may require explicit setting of tooltip's width and height attributes."
+        },
+        {
+            "name": "sticky",
+            "type": "Boolean",
+            "desc": "Forces the tooltip to remain active for a period even if the mouse has left the respective area.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "timeout",
+            "type": "Numeric",
+            "desc": "Time in milliseconds that a sticky tooltip will stay active after the mouse has left the active area.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "alpha",
+            "type": "Numeric",
+            "desc": "Sets the transparency of the object. Values must range between 0.0 and 1.0, with 0.0 being completely invisible and 1.0 being completely opaque. Please note that values also require the leading 0 before the decimal.",
+            "example": "0.3 | 0.9 | ..."
+        },
+        {
+            "name": "angle",
+            "type": "Numeric",
+            "desc": "Sets the rotation angle of the object/shape.",
+            "example": "-45 | 115 | ..."
+        },
+        {
+            "name": "background-colorbackgroundColor",
+            "type": "String",
+            "desc": "Sets the background color of the object.  Colors can be entered by name (e.g. \"red\", \"blue\", \"yellow\"), in hexadecimal notation (e.g. \"#FF0000\", \"#0000FF\", \"#FFFF00\"), or in RGB notation (e.g. \"rgb(255,0,0)\", \"rgb(0,0,255)\", \"rgb(255,255,0)\").  One color will set a solid background color, two colors will, by default, create a horizontal gradient.  For more complex gradients, use gradient-colors and gradient-stops.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "background-color-1backgroundColor1",
+            "type": "String",
+            "desc": "Sets the first color of a 2 color background gradient of the object.  To be used with background-color-2.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "background-color-2backgroundColor2",
+            "type": "String",
+            "desc": "Sets the second color of a 2 color background gradient of the object.  To be used with background-color-1.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "background-fitbackgroundFit",
+            "type": "String",
+            "desc": "Sets the direction/s on which the background image is being \"stretched\".",
+            "example": "\"x\" | \"y\" | \"xy\""
+        },
+        {
+            "name": "background-imagebackgroundImage",
+            "type": "String",
+            "desc": "Sets a background image for the object. Value can be a local file or a web image's location.",
+            "example": "\"image.png\" | ..."
+        },
+        {
+            "name": "background-positionbackgroundPosition",
+            "type": "String",
+            "desc": "Sets the position of the background when the background-repeat value is no-repeat.",
+            "example": "\"0 0\" | \"50 100\" | \"80% 60%\" | ..."
+        },
+        {
+            "name": "background-repeatbackgroundRepeat",
+            "type": "String",
+            "desc": "Sets the repeating mode for the background image.",
+            "example": "\"no-repeat\" | \"repeat\" | \"repeat-x\" | \"repeat-y\""
+        },
+        {
+            "name": "border-bottomborderBottom",
+            "type": "String",
+            "desc": "Sets the object's bottom border style.  Accepts solid, dashed, and dotted styles.  Defaults to black if color is not properly set.",
+            "example": "\"2px solid #f00\" | ..."
+        },
+        {
+            "name": "border-colorborderColor",
+            "type": "String",
+            "desc": "Sets the border color of the object.  To be used with border-width.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "border-leftborderLeft",
+            "type": "String",
+            "desc": "Sets the object's left border style.  Accepts solid, dashed, and dotted styles.  Defaults to black if color is not properly set.",
+            "example": "\"2px solid #f00\" | ..."
+        },
+        {
+            "name": "border-radiusborderRadius",
+            "type": "Mixed",
+            "desc": "Sets the object's border radius, for rounded corners.  The higher the value, the more rounded the corners appear.",
+            "example": "4 | \"6px\" | \"6px 10px 3px 5px\" | \"-10px\" | ..."
+        },
+        {
+            "name": "border-radius-bottom-leftborderRadiusBottomLeft",
+            "type": "Mixed",
+            "desc": "Sets the object's bottom-left border radius, for rounded corners.",
+            "example": "4 | \"6px\" | \"-6px\" | -4 | ..."
+        },
+        {
+            "name": "border-radius-bottom-rightborderRadiusBottomRight",
+            "type": "Mixed",
+            "desc": "Sets the object's bottom-right border radius, for rounded corners.",
+            "example": "4 | \"6px\" | \"-6px\" | -4 | ..."
+        },
+        {
+            "name": "border-radius-top-leftborderRadiusTopLeft",
+            "type": "Mixed",
+            "desc": "Sets the object's top-left border radius, for rounded corners.",
+            "example": "4 | \"6px\" | \"-6px\" | -4 | ..."
+        },
+        {
+            "name": "border-radius-top-rightborderRadiusTopRight",
+            "type": "Mixed",
+            "desc": "Sets the object's top-right border radius, for rounded corners.",
+            "example": "4 | \"6px\" | \"-6px\" | -4 | ..."
+        },
+        {
+            "name": "border-rightborderRight",
+            "type": "String",
+            "desc": "Sets the object's right border style.  Accepts solid, dashed, and dotted styles.  Defaults to black if color is not properly set.",
+            "example": "\"2px solid #f00\" | ..."
+        },
+        {
+            "name": "border-topborderTop",
+            "type": "String",
+            "desc": "Sets the object's top border style.  Accepts solid, dashed, and dotted styles.  Defaults to black if color is not properly set.",
+            "example": "\"2px solid #f00\" | ..."
+        },
+        {
+            "name": "border-widthborderWidth",
+            "type": "Mixed",
+            "desc": "Sets the border width of the object.  If no border-color is set, will default to black.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "callout",
+            "type": "Boolean",
+            "desc": "Sets whether an object will have a callout arrow or not.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "callout-extensioncalloutExtension",
+            "type": "Mixed",
+            "desc": "Sets the length of the extension that extends beyond the tip of the callout arrow.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "callout-heightcalloutHeight",
+            "type": "Mixed",
+            "desc": "Sets the height of the object's callout arrow.  A larger value will create a taller callout arrow.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "callout-hookcalloutHook",
+            "type": "Array",
+            "desc": "Sets a location for the point of the tip of the callout arrow.  Uses [x, y] coordinates relative to the tooltip box.",
+            "example": "[200, 50] | ..."
+        },
+        {
+            "name": "callout-offsetcalloutOffset",
+            "type": "Mixed",
+            "desc": "Sets the offset for the origin of the callout arrow.  Positive and negative values can be used to move the callout arrow up, down, left, or right, depending on the callout-position.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "callout-positioncalloutPosition",
+            "type": "String",
+            "desc": "Sets the position for the object's callout arrow.  The position is \"bottom\" by default.",
+            "example": "\"top\" | \"right\" | \"bottom\" | \"left\""
+        },
+        {
+            "name": "callout-widthcalloutWidth",
+            "type": "Mixed",
+            "desc": "Sets the width of the object's callout arrow.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "clip-textclipText",
+            "type": "Boolean",
+            "desc": "",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "color",
+            "type": "String",
+            "desc": "Sets the object's text color.  Similar to font-color.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "fill-anglefillAngle",
+            "type": "Numeric",
+            "desc": "Sets the angle of the axis along which the linear gradient is drawn.",
+            "example": "-45 | 115 | ..."
+        },
+        {
+            "name": "fill-offset-xfillOffsetX",
+            "type": "Mixed",
+            "desc": "Sets an X offset to apply to the fill.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "fill-offset-yfillOffsetY",
+            "type": "Mixed",
+            "desc": "Sets an Y offset to apply to the fill.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "fill-typefillType",
+            "type": "String",
+            "desc": "Sets the background gradient fill type to either linear or radial.",
+            "example": "\"linear\" | \"radial\""
+        },
+        {
+            "name": "font-anglefontAngle",
+            "type": "Numeric",
+            "desc": "Sets the rotation angle of the object and its text.  Similar to angle.",
+            "example": "-45 | 115 | ..."
+        },
+        {
+            "name": "font-colorfontColor",
+            "type": "String",
+            "desc": "Sets the object's font color.  Similar to color.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "font-familyfontFamily",
+            "type": "String",
+            "desc": "Sets the object's font family.",
+            "example": "\"Arial\" | \"Tahoma,Verdana\" | ..."
+        },
+        {
+            "name": "font-sizefontSize",
+            "type": "Mixed",
+            "desc": "Sets the object's font size.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "font-stylefontStyle",
+            "type": "String",
+            "desc": "Sets the object's font style.  Similar to italic.",
+            "example": "\"none\" | \"italic\" | \"oblique\""
+        },
+        {
+            "name": "font-weightfontWeight",
+            "type": "String",
+            "desc": "Sets the object's font weight.  Similar to bold.",
+            "example": "\"normal\" | \"bold\""
+        },
+        {
+            "name": "gradient-colorsgradientColors",
+            "type": "String",
+            "desc": "Sets a set of colors for a complex gradient of 3 or more colors.  To be used with gradient-stops.",
+            "example": "\"#f00 #0f0 #00f\" | ..."
+        },
+        {
+            "name": "gradient-stopsgradientStops",
+            "type": "String",
+            "desc": "Sets a set of steps corresponding to each color for a complex gradient of 3 or more colors.  To be used with gradient-colors.",
+            "example": "\"0.1 0.5 0.9\" | ..."
+        },
+        {
+            "name": "height",
+            "type": "Mixed",
+            "desc": "Sets the object's height.",
+            "example": "10 | \"20px\" | 0.3 | \"30%\" | ..."
+        },
+        {
+            "name": "item",
+            "type": "String",
+            "desc": "Sets the item id of the map on which the object/shape is being added.",
+            "example": "\"itemid\" | ..."
+        },
+        {
+            "name": "map",
+            "type": "String",
+            "desc": "Sets the map id of the map on which the object/shape is being added.",
+            "example": "\"mapid\" | ..."
+        },
+        {
+            "name": "margin",
+            "type": "Mixed",
+            "desc": "Sets the object's margin/s.",
+            "example": "10 | \"5px\" | \"10 20\" | \"5px 10px 15px 20px\" | ..."
+        },
+        {
+            "name": "margin-bottommarginBottom",
+            "type": "Mixed",
+            "desc": "Sets the object's bottom margin.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "margin-leftmarginLeft",
+            "type": "Mixed",
+            "desc": "Sets the object's left margin.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "margin-rightmarginRight",
+            "type": "Mixed",
+            "desc": "Sets the object's right margin.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "margin-topmarginTop",
+            "type": "Mixed",
+            "desc": "Sets the object's top margin.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "max-charsmaxChars",
+            "type": "Numeric",
+            "desc": "Sets the maximum numbers of characters displayed in the object.  The value determines how many characters will be displayed before the text is cut and appended with \"...\"",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "max-widthmaxWidth",
+            "type": "Mixed",
+            "desc": "Sets the maximum width of the text box. If text is longer than the max-width value, it will overlap the box or will wrap if wrap-text is set to true.",
+            "example": "10 | \"20px\" | 0.3 | \"30%\" | ..."
+        },
+        {
+            "name": "offset-xoffsetX",
+            "type": "Mixed",
+            "desc": "Sets an X offset for the object.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "offset-yoffsetY",
+            "type": "Mixed",
+            "desc": "Sets a Y offset for the object.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "padding",
+            "type": "Mixed",
+            "desc": "Sets the padding around the object's text.  Up to four values can be used to set the padding around the text, with the first value being the top padding, the second value being the right padding, the third value being the bottom padding, and the fourth value being the left padding.",
+            "example": "10 | \"5px\" | \"10 20\" | \"5px 10px 15px 20px\" | ..."
+        },
+        {
+            "name": "padding-bottompaddingBottom",
+            "type": "Mixed",
+            "desc": "Sets the bottom padding for the object's text.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "padding-leftpaddingLeft",
+            "type": "Mixed",
+            "desc": "Sets the left padding for the object's text.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "padding-rightpaddingRight",
+            "type": "Mixed",
+            "desc": "Sets the right padding for the object's text.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "padding-toppaddingTop",
+            "type": "Mixed",
+            "desc": "Sets the top padding for the object's text.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "position",
+            "type": "String",
+            "desc": "Sets the object's position relative to it's container. Similar results can be obtained by setting margin and margin-... attributes.",
+            "example": ""
+        },
+        {
+            "name": "rtl (right-to-left)",
+            "type": "Boolean",
+            "desc": "Renders text right-to-left. Default value is false.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "shadow",
+            "type": "Boolean",
+            "desc": "Sets whether the object has a shdaow or not.  Defaults to a thin, gray shadow at a 45 degree angle.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "shadow-alphashadowAlpha",
+            "type": "Numeric",
+            "desc": "Sets the transparency of the object's shadow.",
+            "example": "0.3 | 0.9 | ..."
+        },
+        {
+            "name": "shadow-angleshadowAngle",
+            "type": "Numeric",
+            "desc": "Sets the angle of the shadow (light source) applied to the object.",
+            "example": "-45 | 115 | ..."
+        },
+        {
+            "name": "shadow-blurshadowBlur",
+            "type": "Mixed",
+            "desc": "Sets the blur effect size for the object's shadow.  Limited effect on HTML5 implementation.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "shadow-colorshadowColor",
+            "type": "String",
+            "desc": "Sets the color of the object's shadow.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "shadow-distanceshadowDistance",
+            "type": "Mixed",
+            "desc": "Sets the distance between the shadow and the object.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "visible",
+            "type": "Boolean",
+            "desc": "Sets whether the object is visible or not.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "width",
+            "type": "Mixed",
+            "desc": "Sets the width of the object.  May truncate text.",
+            "example": "10 | \"20px\" | 0.3 | \"30%\" | ..."
+        },
+        {
+            "name": "wrap-textwrapText",
+            "type": "Boolean",
+            "desc": "Sets whether the text will wrap, depending on the width of the object.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "x",
+            "type": "Mixed",
+            "desc": "Sets the X position of the object.",
+            "example": "10 | \"20px\" | 0.3 | \"30%\" | ..."
+        },
+        {
+            "name": "y",
+            "type": "Mixed",
+            "desc": "Sets the Y position of the object.",
+            "example": "10 | \"20px\" | 0.3 | \"30%\" | ..."
+        },
+        {
+            "name": "z-indexzIndex",
+            "type": "Numeric",
+            "desc": "Sets the z position of the object. Objects with higher z indexes will appear \"above\" those with lower z index values.",
+            "example": "5 | 10 | ..."
+        }
+    ]
+}

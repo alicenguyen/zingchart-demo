@@ -19,7 +19,8 @@ var Chart = mongoose.model('Chart', chartSchema);
 
 
 // CHANGE ME
-mongoose.connect('localhost');
+// mongoose.connect('localhost');
+mongoose.connect('mongodb://anguyen:zingnimbus1@ds035740.mongolab.com:35740/zingchart-demo-db');
 
 
 var app = express();

@@ -1,0 +1,37 @@
+{
+    "name": "item",
+    "type": "context-menu-objects",
+    "desc": "Customizes the styling for the context menu items, the list of options that appears when a user right-clicks on a graph rendered in HTML5.",
+    "attrs": [
+        {
+            "name": "hover-statehoverState",
+            "type": "Object",
+            "desc": "The styling for the context menu item when a user is hovering over it.",
+            "example": "{...}"
+        },
+        {
+            "name": "background-imagebackgroundImage",
+            "type": "String",
+            "desc": "Sets a background image for the object. Value can be a local file or a web image's location.",
+            "example": "\"image.png\" | ..."
+        },
+        {
+            "name": "border-colorborderColor",
+            "type": "String",
+            "desc": "Sets the border color of the object, applicable on closed shapes. See also line-color for closed shapes.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "border-widthborderWidth",
+            "type": "Mixed",
+            "desc": "Sets the border width of the object, applicable on closed shapes. See also line-width for closed shapes.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "background-imagebackgroundImage",
+            "type": "String",
+            "desc": "Sets a background image for the object. Value can be a local file or a web image's location.",
+            "example": "\"image.png\" | ..."
+        }
+    ]
+}

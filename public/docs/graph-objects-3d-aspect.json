@@ -1,0 +1,49 @@
+{
+    "name": "3d-aspect",
+    "type": "graph-objects",
+    "desc": "Sets the 3D properties for 3D chart types.  Allows you to change the viewing angle, chart depth, zoom level, and 3D engine type.",
+    "attrs": [
+        {
+            "name": "angle",
+            "type": "Numeric",
+            "desc": "Sets the view angle when using the isometric 3D engine.  Value can be between 0 and 90, with the default viewing angle being 45°.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "depth",
+            "type": "Numeric",
+            "desc": "Sets the Z depth for a 3D chart type displayed in either isometric or true 3D.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "true3d",
+            "type": "Boolean",
+            "desc": "Sets whether the chart uses a true 3D engine or an isometric view.  Disabling true3d forces an isometric view.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "x-anglexAngle",
+            "type": "Numeric",
+            "desc": "Sets the X rotation viewing angle for the true 3D view. Viewing angle may vary depending on the chart type.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "y-angleyAngle",
+            "type": "Numeric",
+            "desc": "Sets the Y rotation viewing angle for the true 3D view. Viewing angle may vary depending on the chart type.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "z-anglezAngle",
+            "type": "Numeric",
+            "desc": "Sets the Z rotation viewing angle for the true 3D view. Viewing angle may vary depending on the chart type.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "zoom",
+            "type": "Numeric",
+            "desc": "Sets the perspective zoom for the true 3D view.  The default zoom level is 1.0.  Note that a leading 0 is required before the decimal for values less than 1.0.",
+            "example": "1 | 1.5 | 0.8 | ..."
+        }
+    ]
+}

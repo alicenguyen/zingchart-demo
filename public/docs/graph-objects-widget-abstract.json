@@ -1,0 +1,13 @@
+{
+    "name": "widget-abstract",
+    "type": "graph-objects",
+    "desc": "",
+    "attrs": [
+        {
+            "name": "type",
+            "type": "String",
+            "desc": "Type of the widget. The zingchart.widgets.myWidget object must exist and define a \"parse\" method returning an object with \"graphs\", \"labels\" and \"shapes\" collections which will be injected in the original JSON.",
+            "example": "\"myWidget\" | ..."
+        }
+    ]
+}

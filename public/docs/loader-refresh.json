@@ -1,0 +1,19 @@
+{
+    "name": "refresh",
+    "type": "loader",
+    "desc": "",
+    "attrs": [
+        {
+            "name": "interval",
+            "type": "Numeric",
+            "desc": "Sets the timeout between two refresh operations. If value is smaller than 50, seconds are assumed, otherwise milliseconds are assumed.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "type",
+            "type": "String",
+            "desc": "Sets the type of data refresh, full being the only option at loader's level.",
+            "example": "\"full\""
+        }
+    ]
+}

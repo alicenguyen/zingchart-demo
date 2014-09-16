@@ -1,0 +1,517 @@
+{
+    "name": "graph-abstract",
+    "type": "loader",
+    "desc": "",
+    "attrs": [
+        {
+            "name": "3d-aspect3dAspect",
+            "type": "Object",
+            "desc": "Sets the graph's 3D aspect.  3D graphs can be displayed in either true 3D or in an isometric 3D view.  True 3D graphs allow more view options.  For more information, see 3d-aspect.",
+            "example": "{...}"
+        },
+        {
+            "name": "animate-typeanimateType",
+            "type": "String",
+            "desc": "Sets if graph's animation runs on every chart reload/zoom or only on the first rendering.",
+            "example": "\"always\" | \"initial\""
+        },
+        {
+            "name": "arrows",
+            "type": "Array",
+            "desc": "Acts as a container for any number of arrow objects, which can be styled and placed anywhere on your chart.  For more information, see arrows.",
+            "example": "[...]"
+        },
+        {
+            "name": "async",
+            "type": "Boolean",
+            "desc": "Sets if graph's rendering is being done in one step or sequential. Useful for big charts or rendering on slow browsers (old Internet Explorer versions).",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "async",
+            "type": "Boolean",
+            "desc": "Sets if the graph is rendered in async mode. If specified, overrides the global zingchart.ASYNC parameter.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "crosshair-xcrosshairX",
+            "type": "Object",
+            "desc": "Sets the definition for the graph's X crosshair object. For more information, see crosshair-x, crosshair-y.",
+            "example": "{...}"
+        },
+        {
+            "name": "crosshair-ycrosshairY",
+            "type": "Object",
+            "desc": "Sets the definition for the graph's Y crosshair object. For more information, see crosshair-x, crosshair-y.",
+            "example": "{...}"
+        },
+        {
+            "name": "csv",
+            "type": "Object",
+            "desc": "Sets a CSV data source for the data of the chart.  For more information, see CSV.",
+            "example": "{...}"
+        },
+        {
+            "name": "guide",
+            "type": "Object",
+            "desc": "When used outside of a scale object, acts similar to crosshair-x in that it can be used to style the X crosshair.  For more information, see crosshair-x.",
+            "example": "{...}"
+        },
+        {
+            "name": "images",
+            "type": "Array",
+            "desc": "Acts as a container for any number of image objects, which can be styled and placed anywhere on your chart.  For more information, see images.",
+            "example": "[...]"
+        },
+        {
+            "name": "labels",
+            "type": "Array",
+            "desc": "Acts as a container for any number of label objects, which can be styled and placed anywhere on your chart.  For more information, see labels.",
+            "example": "[...]"
+        },
+        {
+            "name": "legend",
+            "type": "Object",
+            "desc": "Allows you to customize the appearance and functionality of your chart's legend object.  For more information, see legend.",
+            "example": "{...}"
+        },
+        {
+            "name": "palette",
+            "type": "Array",
+            "desc": "Quick attribute for setting up a set of colors for the plot. The attribute sets the base colors, the actual palette used is being dynamically generated starting from the base colors and setting the white color to the text.",
+            "example": "[\"#f00\", \"#0f0\", ...]"
+        },
+        {
+            "name": "plot",
+            "type": "Object",
+            "desc": "Allows you to configure a number of different attributes that will affect every plotted value or individual series, depending on its placement.  For more information, see plot.",
+            "example": "{...}"
+        },
+        {
+            "name": "plotarea",
+            "type": "Object",
+            "desc": "Allows you to customize a chart's plotarea, which is the area behind your plotted values.  For more information, see plotarea.",
+            "example": "{...}"
+        },
+        {
+            "name": "preview",
+            "type": "Object",
+            "desc": "Allows you to customize the appearance of a graph preview, which will allow users to see a small preview of an entire chart at all times as well as select which portion of a chart to display.  For more information, see preview.",
+            "example": "{...}"
+        },
+        {
+            "name": "refresh",
+            "type": "Object",
+            "desc": "When pulling data from an external source, this will allow you to control the automated data refresh system.  For more information, see refresh.",
+            "example": "{...}"
+        },
+        {
+            "name": "scale",
+            "type": "Object",
+            "desc": "Sets the definition for the graph's matrix scale, in case more than one dataset exists.",
+            "example": "{...}"
+        },
+        {
+            "name": "scale-kscaleK",
+            "type": "Object",
+            "desc": "Sets the definition for the graph's key scale.",
+            "example": "{...}"
+        },
+        {
+            "name": "scale-rscaleR",
+            "type": "Object",
+            "desc": "Allows you to customize the appearance of the R scale, which is primarily used in gauge type charts.  For more information, see scale-r.",
+            "example": "{...}"
+        },
+        {
+            "name": "scale-vscaleV",
+            "type": "Object",
+            "desc": "Sets the definition for the graph's value scale.",
+            "example": "{...}"
+        },
+        {
+            "name": "scale-xscaleX",
+            "type": "Object",
+            "desc": "Allows you to customize a chart's primary X scale.  For more information, see scale-x, scale-x-n.",
+            "example": "{...}"
+        },
+        {
+            "name": "scale-x-nscaleXN",
+            "type": "Object",
+            "desc": "Allows you to customize a chart's subsequent X scales, where n represents the chart's scale number.  For more information, see scale-x, scale-x-n.",
+            "example": "{...}"
+        },
+        {
+            "name": "scale-yscaleY",
+            "type": "Object",
+            "desc": "Allows you to customize a chart's primary Y scale.  For more information, see scale-y, scale-y-n.",
+            "example": "{...}"
+        },
+        {
+            "name": "scale-y-nscaleYN",
+            "type": "Object",
+            "desc": "Allows you to customize a chart's subsequent Y scales, where n represents the chart's scale number.  For more information, see scale-y, scale-y-n.",
+            "example": "{...}"
+        },
+        {
+            "name": "scroll-xscrollX",
+            "type": "Object",
+            "desc": "Allows you to customize the appearance of the x axis scroll bar and handle.  For more information, see scroll-x/scroll-y.",
+            "example": "{...}"
+        },
+        {
+            "name": "scroll-yscrollY",
+            "type": "Object",
+            "desc": "Allows you to customize the appearance of the y axis scroll bar and handle.  For more information, see scroll-x/scroll-y.",
+            "example": "{...}"
+        },
+        {
+            "name": "series",
+            "type": "Array",
+            "desc": "Acts as a container to hold that chart's data values.  Also allows you to set various attributes separately for individual series.  For more information, see series.",
+            "example": "[...]"
+        },
+        {
+            "name": "shapes",
+            "type": "Array",
+            "desc": "Acts as a container for any number of shape objects, which can be styled and placed anywhere on your chart.  For more information, see shapes.",
+            "example": "[...]"
+        },
+        {
+            "name": "source",
+            "type": "Object",
+            "desc": "Allows you to customize a chart's source.  For more information, see source.",
+            "example": "{...}"
+        },
+        {
+            "name": "stack-typestackType",
+            "type": "String",
+            "desc": "Sets the chart's stacking method (normal stacking or always stacked up to 100%).",
+            "example": "\"normal\" | \"100%\""
+        },
+        {
+            "name": "stacked",
+            "type": "Boolean",
+            "desc": "Sets if the graph plots are stacked or not. See also plot:stacked.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "subtitle",
+            "type": "Object",
+            "desc": "Allows you to customize a chart's subtitle.  For more information, see subtitle.",
+            "example": "{...}"
+        },
+        {
+            "name": "title",
+            "type": "Object",
+            "desc": "Allows you to customize a chart's title.  For more information, see title.",
+            "example": "{...}"
+        },
+        {
+            "name": "tooltip",
+            "type": "Object",
+            "desc": "Sets the definition for the graph's tooltip object.",
+            "example": "{...}"
+        },
+        {
+            "name": "type",
+            "type": "String",
+            "desc": "Sets the type of the graph.",
+            "example": "\"null\" | \"line\" | \"bar\" | ..."
+        },
+        {
+            "name": "utc",
+            "type": "Boolean",
+            "desc": "Sets if the timestamps contained in the series data should be treated as UTC or local times.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "widgets",
+            "type": "Array",
+            "desc": "Sets the graph's widgets collection.",
+            "example": "[...]"
+        },
+        {
+            "name": "zoom",
+            "type": "Object",
+            "desc": "Sets the definition for the graph's zoom object.",
+            "example": "{...}"
+        },
+        {
+            "name": "alpha",
+            "type": "Numeric",
+            "desc": "Sets the transparency of the object. Values must range between 0.0 and 1.0, with 0.0 being completely invisible and 1.0 being completely opaque. Please note that values also require the leading 0 before the decimal.",
+            "example": "0.3 | 0.9 | ..."
+        },
+        {
+            "name": "background-colorbackgroundColor",
+            "type": "String",
+            "desc": "Sets the background color of the object.  Colors can be entered by name (e.g. \"red\", \"blue\", \"yellow\"), in hexadecimal notation (e.g. \"#FF0000\", \"#0000FF\", \"#FFFF00\"), or in RGB notation (e.g. \"rgb(255,0,0)\", \"rgb(0,0,255)\", \"rgb(255,255,0)\").  One color will set a solid background color, two colors will, by default, create a horizontal gradient.  For more complex gradients, use gradient-colors and gradient-stops.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "background-color-1backgroundColor1",
+            "type": "String",
+            "desc": "Sets the first color of a 2 color background gradient of the object.  To be used with background-color-2.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "background-color-2backgroundColor2",
+            "type": "String",
+            "desc": "Sets the second color of a 2 color background gradient of the object.  To be used with background-color-1.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "background-fitbackgroundFit",
+            "type": "String",
+            "desc": "Sets the direction/s on which the background image is being \"stretched\".",
+            "example": "\"x\" | \"y\" | \"xy\""
+        },
+        {
+            "name": "background-imagebackgroundImage",
+            "type": "String",
+            "desc": "Sets a background image for the object. Value can be a local file or a web image's location.",
+            "example": "\"image.png\" | ..."
+        },
+        {
+            "name": "background-positionbackgroundPosition",
+            "type": "String",
+            "desc": "Sets the position of the background when the background-repeat value is no-repeat.",
+            "example": "\"0 0\" | \"50 100\" | \"80% 60%\" | ..."
+        },
+        {
+            "name": "background-repeatbackgroundRepeat",
+            "type": "String",
+            "desc": "Sets the repeating mode for the background image.",
+            "example": "\"no-repeat\" | \"repeat\" | \"repeat-x\" | \"repeat-y\""
+        },
+        {
+            "name": "border-bottomborderBottom",
+            "type": "String",
+            "desc": "Sets the object's bottom border style.  Accepts solid, dashed, and dotted styles.",
+            "example": "\"2px solid #f00\" | ..."
+        },
+        {
+            "name": "border-colorborderColor",
+            "type": "String",
+            "desc": "Sets the border color of the object, applicable on closed shapes. See also line-color for closed shapes.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "border-leftborderLeft",
+            "type": "String",
+            "desc": "Sets the object's left border style.   Accepts solid, dashed, and dotted styles.",
+            "example": "\"2px solid #f00\" | ..."
+        },
+        {
+            "name": "border-radiusborderRadius",
+            "type": "Mixed",
+            "desc": "Sets the object's border radius, for rounded corners.  Larger values create rounder corners, while smaller values create sharper corners.  A single value will affect all 4 corners, while multiple values will have separate effects on each corner, with the first value affecting the top-left corner, the second value affecting the top-right corner, and so on, in a clockwise direction. A negative value will cut a corner off without rounding.",
+            "example": "4 | \"6px\" | \"6px 10px 3px 5px\" | \"-10px\" | ..."
+        },
+        {
+            "name": "border-radius-bottom-leftborderRadiusBottomLeft",
+            "type": "Mixed",
+            "desc": "Sets the object's bottom-left border radius, for rounded corners.  Larger values create rounder corners, while smaller values create sharper corners.  A negative value will cut a corner off without rounding.",
+            "example": "4 | \"6px\" | \"-6px\" | -4 | ..."
+        },
+        {
+            "name": "border-radius-bottom-rightborderRadiusBottomRight",
+            "type": "Mixed",
+            "desc": "Sets the object's bottom-right border radius, for rounded corners.  Larger values create rounder corners, while smaller values create sharper corners.  A negative value will cut a corner off without rounding.",
+            "example": "4 | \"6px\" | \"-6px\" | -4 | ..."
+        },
+        {
+            "name": "border-radius-top-leftborderRadiusTopLeft",
+            "type": "Mixed",
+            "desc": "Sets the object's top-left border radius, for rounded corners.  Larger values create rounder corners, while smaller values create sharper corners.  A negative value will cut a corner off without rounding.",
+            "example": "4 | \"6px\" | \"-6px\" | -4 | ..."
+        },
+        {
+            "name": "border-radius-top-rightborderRadiusTopRight",
+            "type": "Mixed",
+            "desc": "Sets the object's top-right border radius, for rounded corners.  Larger values create rounder corners, while smaller values create sharper corners.  A negative value will cut a corner off without rounding.",
+            "example": "4 | \"6px\" | \"-6px\" | -4 | ..."
+        },
+        {
+            "name": "border-rightborderRight",
+            "type": "String",
+            "desc": "Sets the object's right border style.  Accepts solid, dashed, and dotted styles.",
+            "example": "\"2px solid #f00\" | ..."
+        },
+        {
+            "name": "border-topborderTop",
+            "type": "String",
+            "desc": "Sets the object's top border style.  Values must include the border width, style, and color.  Accepts solid, dashed, and dotted styles.",
+            "example": "\"2px solid #f00\" | ..."
+        },
+        {
+            "name": "border-widthborderWidth",
+            "type": "Mixed",
+            "desc": "Sets the border width of the object, applicable on closed shapes. See also line-width for closed shapes.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "callout",
+            "type": "Boolean",
+            "desc": "Sets whether an object will have a callout arrow or not.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "callout-extensioncalloutExtension",
+            "type": "Mixed",
+            "desc": "Sets the length of the extension that extends beyond the tip of the callout arrow.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "callout-heightcalloutHeight",
+            "type": "Mixed",
+            "desc": "Sets the height of the object's callout arrow.  A larger value will create a taller callout arrow.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "callout-hookcalloutHook",
+            "type": "Array",
+            "desc": "Sets the point of the tip of the callout arrow to a specified coordinate on the chart, with the starting point of [0,0] being the top left corner of the chart.",
+            "example": "[200, 50] | ..."
+        },
+        {
+            "name": "callout-offsetcalloutOffset",
+            "type": "Mixed",
+            "desc": "Sets the offset along the callout direction of the arrow's base.  Positive and negative values can be used to offset the callout arrow up, down, left, or right depending on the callout-position.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "callout-positioncalloutPosition",
+            "type": "String",
+            "desc": "Sets the position for the object's callout arrow.  The position is \"bottom\" by default.",
+            "example": "\"top\" | \"right\" | \"bottom\" | \"left\""
+        },
+        {
+            "name": "callout-widthcalloutWidth",
+            "type": "Mixed",
+            "desc": "Sets the width of the object's callout arrow.  A larger value will create a wider callout arrow.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "fill-anglefillAngle",
+            "type": "Numeric",
+            "desc": "Sets the angle of the axis along which the linear gradient is drawn.",
+            "example": "-45 | 115 | ..."
+        },
+        {
+            "name": "fill-offset-xfillOffsetX",
+            "type": "Mixed",
+            "desc": "Sets an X offset to apply to the fill.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "fill-offset-yfillOffsetY",
+            "type": "Mixed",
+            "desc": "Sets an Y offset to apply to the fill.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "fill-typefillType",
+            "type": "String",
+            "desc": "Sets the background gradient fill type to either linear or radial.",
+            "example": "\"linear\" | \"radial\""
+        },
+        {
+            "name": "gradient-colorsgradientColors",
+            "type": "String",
+            "desc": "Sets a set of colors for a complex background gradient consisting of 2 or more colors. To be used with gradient-stops.",
+            "example": "\"#f00 #0f0 #00f\" | ..."
+        },
+        {
+            "name": "gradient-stopsgradientStops",
+            "type": "String",
+            "desc": "Sets the gradient stops for a complex background gradient consisting of 2 or more colors. To be used with gradient-colors.",
+            "example": "\"0.1 0.5 0.9\" | ..."
+        },
+        {
+            "name": "height",
+            "type": "Mixed",
+            "desc": "Sets the object's height.",
+            "example": "10 | \"20px\" | 0.3 | \"30%\" | ..."
+        },
+        {
+            "name": "item",
+            "type": "String",
+            "desc": "Sets the item id of the map on which the object/shape is being added.",
+            "example": "\"itemid\" | ..."
+        },
+        {
+            "name": "map",
+            "type": "String",
+            "desc": "Sets the map id of the map on which the object/shape is being added.",
+            "example": "\"mapid\" | ..."
+        },
+        {
+            "name": "position",
+            "type": "String",
+            "desc": "Sets the object's position relative to it's container. Similar results can be obtained by setting margin and margin-... attributes.",
+            "example": ""
+        },
+        {
+            "name": "shadow",
+            "type": "Boolean",
+            "desc": "Sets whether the object's shadow is visible or not.  Has limited effect on HTML5 implementation.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "shadow-alphashadowAlpha",
+            "type": "Numeric",
+            "desc": "Sets the transparency of the shadow of the object. Values must range between 0.0 and 1.0, with 0.0 being completely invisible and 1.0 being completely opaque. Please note that values also require the leading 0 before the decimal.",
+            "example": "0.3 | 0.9 | ..."
+        },
+        {
+            "name": "shadow-angleshadowAngle",
+            "type": "Numeric",
+            "desc": "Sets the angle of the shadow underneath the object.",
+            "example": "-45 | 115 | ..."
+        },
+        {
+            "name": "shadow-blurshadowBlur",
+            "type": "Mixed",
+            "desc": "Sets the blur effect size for the shadow of the object. Has limited effect on HTML5 implementation.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "shadow-colorshadowColor",
+            "type": "String",
+            "desc": "Sets the color of the shadow of the object.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "shadow-distanceshadowDistance",
+            "type": "Mixed",
+            "desc": "Sets the distance between the shadow and the object.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "width",
+            "type": "Mixed",
+            "desc": "Sets the object's width.",
+            "example": "10 | \"20px\" | 0.3 | \"30%\" | ..."
+        },
+        {
+            "name": "x",
+            "type": "Mixed",
+            "desc": "Sets the X position of the object.",
+            "example": "10 | \"20px\" | 0.3 | \"30%\" | ..."
+        },
+        {
+            "name": "y",
+            "type": "Mixed",
+            "desc": "Sets the Y position of the object.",
+            "example": "10 | \"20px\" | 0.3 | \"30%\" | ..."
+        },
+        {
+            "name": "z-indexzIndex",
+            "type": "Numeric",
+            "desc": "Sets the z position of the object. Objects with higher z indexes will appear \"above\" those with lower z index values.",
+            "example": "5 | 10 | ..."
+        }
+    ]
+}

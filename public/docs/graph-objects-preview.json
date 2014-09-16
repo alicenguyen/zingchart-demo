@@ -1,0 +1,163 @@
+{
+    "name": "preview",
+    "type": "graph-objects",
+    "desc": "Sets the definition for the chart's preview object, a miniature version of the entire chart that can be used to zoom, or orient the user.",
+    "attrs": [
+        {
+            "name": "active",
+            "type": "Object",
+            "desc": "Sets the styling for preview's active area.",
+            "example": "{...}"
+        },
+        {
+            "name": "handle",
+            "type": "Object",
+            "desc": "Sets the styling for the preview's handles.",
+            "example": "{...}"
+        },
+        {
+            "name": "handle-bottomhandleBottom",
+            "type": "Object",
+            "desc": "Sets the styling for preview's bottom handle.",
+            "example": "{...}"
+        },
+        {
+            "name": "handle-lefthandleLeft",
+            "type": "Object",
+            "desc": "Sets the styling for preview's left handle.",
+            "example": "{...}"
+        },
+        {
+            "name": "handle-righthandleRight",
+            "type": "Object",
+            "desc": "Sets the styling for preview's right handle.",
+            "example": "{...}"
+        },
+        {
+            "name": "handle-tophandleTop",
+            "type": "Object",
+            "desc": "Sets the styling for preview's top handle.",
+            "example": "{...}"
+        },
+        {
+            "name": "live",
+            "type": "Boolean",
+            "desc": "Sets whether the chart is updated when the preview active area is being moved. Default is false, the graph will update only when a the mouse is released.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "mask",
+            "type": "Object",
+            "desc": "Sets the styling for the preview mask, which indicates the hidden area of the chart within the preview.",
+            "example": "{...}"
+        },
+        {
+            "name": "min-distanceminDistance",
+            "type": "Numeric",
+            "desc": "Sets the minimum width of preview's active area.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "preserve-zoompreserveZoom",
+            "type": "Boolean",
+            "desc": "Sets whether the zoom level is preserved when a chart is altered or reloaded.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "alpha",
+            "type": "Numeric",
+            "desc": "Sets the transparency of the preview object. Values must range between 0.0 and 1.0, with 0.0 being completely invisible and 1.0 being completely opaque. Please note that values also require the leading 0 before the decimal.   Has no effect on charted data within a preview.",
+            "example": "0.3 | 0.9 | ..."
+        },
+        {
+            "name": "background-colorbackgroundColor",
+            "type": "String",
+            "desc": "Sets the background color of the object.  Colors can be entered by name (e.g. \"red\", \"blue\", \"yellow\"), in hexadecimal notation (e.g. \"#FF0000\", \"#0000FF\", \"#FFFF00\"), or in RGB notation (e.g. \"rgb(255,0,0)\", \"rgb(0,0,255)\", \"rgb(255,255,0)\").  One color will set a solid background color, two colors will, by default, create a horizontal gradient.  For more complex gradients, use gradient-colors and gradient-stops.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "background-color-1backgroundColor1",
+            "type": "String",
+            "desc": "Sets the first color of a 2 color background gradient of the object.  To be used with background-color-2.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "background-color-2backgroundColor2",
+            "type": "String",
+            "desc": "Sets the second color of a 2 color background gradient of the object.  To be used with background-color-1.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "border-colorborderColor",
+            "type": "String",
+            "desc": "Sets the border color of the object, applicable on closed shapes. See also line-color for closed shapes.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "border-widthborderWidth",
+            "type": "Mixed",
+            "desc": "Sets the border width of the object, applicable on closed shapes. See also line-width for closed shapes.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "height",
+            "type": "Mixed",
+            "desc": "Sets the object's height.",
+            "example": "10 | \"20px\" | 0.3 | \"30%\" | ..."
+        },
+        {
+            "name": "margin",
+            "type": "Mixed",
+            "desc": "Sets the object's margin/s.",
+            "example": "10 | \"5px\" | \"10 20\" | \"5px 10px 15px 20px\" | ..."
+        },
+        {
+            "name": "position",
+            "type": "String",
+            "desc": "Sets the object's position relative to it's container. Similar results can be obtained by setting margin and margin-... attributes.",
+            "example": ""
+        },
+        {
+            "name": "shadow",
+            "type": "Boolean",
+            "desc": "Sets whether the object's shadow is visible or not.  Has limited effect on HTML5 implementation.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "shadow-alphashadowAlpha",
+            "type": "Numeric",
+            "desc": "Sets the transparency of the shadow of the object. Values must range between 0.0 and 1.0, with 0.0 being completely invisible and 1.0 being completely opaque. Please note that values also require the leading 0 before the decimal.",
+            "example": "0.3 | 0.9 | ..."
+        },
+        {
+            "name": "shadow-angleshadowAngle",
+            "type": "Numeric",
+            "desc": "Sets the angle of the shadow underneath the object.",
+            "example": "-45 | 115 | ..."
+        },
+        {
+            "name": "shadow-blurshadowBlur",
+            "type": "Mixed",
+            "desc": "Sets the blur effect size for the shadow of the object. Has limited effect on HTML5 implementation.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "shadow-colorshadowColor",
+            "type": "String",
+            "desc": "Sets the color of the shadow of the object.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "shadow-distanceshadowDistance",
+            "type": "Mixed",
+            "desc": "Sets the distance between the shadow and the object.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "width",
+            "type": "Mixed",
+            "desc": "Sets the object's width.",
+            "example": "10 | \"20px\" | 0.3 | \"30%\" | ..."
+        }
+    ]
+}

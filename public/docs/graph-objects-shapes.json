@@ -1,0 +1,301 @@
+{
+    "name": "shapes",
+    "type": "graph-objects",
+    "desc": "Creates a contain to hold any number of shape object.  Shapes can be styled and placed anywhere on a chart.",
+    "attrs": [
+        {
+            "name": "angle-endangleEnd",
+            "type": "Numeric",
+            "desc": "Sets the end angle of a pie shape.",
+            "example": "\"10\" | \"212\" | ..."
+        },
+        {
+            "name": "angle-startangleStart",
+            "type": "Numeric",
+            "desc": "Sets the beginning angle of a pie shape.",
+            "example": "\"10\" | \"212\" | ..."
+        },
+        {
+            "name": "height",
+            "type": "Numeric",
+            "desc": "Sets the height of the shape",
+            "example": "\"10\" | \"212\" | ..."
+        },
+        {
+            "name": "hover-statehoverState",
+            "type": "Object",
+            "desc": "Customize shape behavior when a user hovers over it.",
+            "example": ""
+        },
+        {
+            "name": "id",
+            "type": "String",
+            "desc": "Id of the shape",
+            "example": "\"myShape\" | \"Square2\" | ..."
+        },
+        {
+            "name": "label",
+            "type": "Object",
+            "desc": "Add a label to the shape.",
+            "example": ""
+        },
+        {
+            "name": "slice",
+            "type": "Numeric",
+            "desc": "Sets the radius of the inner ring of a pie shape.",
+            "example": "\"10\" | \"42\" | ..."
+        },
+        {
+            "name": "width",
+            "type": "Numeric",
+            "desc": "Sets the width of the shape",
+            "example": "\"10\" | \"212\" | ..."
+        },
+        {
+            "name": "alpha",
+            "type": "Numeric",
+            "desc": "Sets the transparency of the object. The higher the value, the less transparent the object appears.  Value ranges from 0.1 to 1 Requires the formatting 0.x",
+            "example": "0.3 | 0.9 | ..."
+        },
+        {
+            "name": "angle",
+            "type": "Numeric",
+            "desc": "Sets the rotation angle of the object/shape.",
+            "example": "-45 | 115 | ..."
+        },
+        {
+            "name": "background-colorbackgroundColor",
+            "type": "String",
+            "desc": "Sets the background color of the object.  Colors can be entered by name (e.g. \"red\", \"blue\", \"yellow\"), in hexadecimal notation (e.g. \"#FF0000\", \"#0000FF\", \"#FFFF00\"), or in RGB notation (e.g. \"rgb(255,0,0)\", \"rgb(0,0,255)\", \"rgb(255,255,0)\").  One color will set a solid background color, two colors will, by default, create a horizontal gradient.  For more complex gradients, use gradient-colors and gradient-stops.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "background-color-1backgroundColor1",
+            "type": "String",
+            "desc": "Sets the first color of a 2 color background gradient of the object.  To be used with background-color-2.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "background-color-2backgroundColor2",
+            "type": "String",
+            "desc": "Sets the second color of a 2 color background gradient of the object.  To be used with background-color-1.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "background-fitbackgroundFit",
+            "type": "String",
+            "desc": "Sets the direction/s on which the background image is being \"stretched\".",
+            "example": "\"x\" | \"y\" | \"xy\""
+        },
+        {
+            "name": "background-imagebackgroundImage",
+            "type": "String",
+            "desc": "Sets a background image for the object. Value can be a local file or a web image's location.",
+            "example": "\"image.png\" | ..."
+        },
+        {
+            "name": "background-positionbackgroundPosition",
+            "type": "String",
+            "desc": "Sets the position of the background when the background-repeat value is no-repeat.",
+            "example": "\"0 0\" | \"50 100\" | \"80% 60%\" | ..."
+        },
+        {
+            "name": "background-repeatbackgroundRepeat",
+            "type": "String",
+            "desc": "Sets the repeating mode for the background image.",
+            "example": "\"no-repeat\" | \"repeat\" | \"repeat-x\" | \"repeat-y\""
+        },
+        {
+            "name": "border-colorborderColor",
+            "type": "String",
+            "desc": "Sets the border color of the object, applicable on closed shapes. See also line-color for closed shapes. Relies on border-width setting.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "border-widthborderWidth",
+            "type": "Mixed",
+            "desc": "Sets the border width of the object, applicable on closed shapes. Defaults to black when border-color is not defined. See also line-width for closed shapes.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "fill-anglefillAngle",
+            "type": "Numeric",
+            "desc": "Sets the angle of the axis along which the linear fill is drawn.",
+            "example": "-45 | 115 | ..."
+        },
+        {
+            "name": "fill-offset-xfillOffsetX",
+            "type": "Mixed",
+            "desc": "Sets an X offset to apply to the fill. Positive value moves the offset right.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "fill-offset-yfillOffsetY",
+            "type": "Mixed",
+            "desc": "Sets a Y offset to apply to the fill. With a radial fill, positive value moves the offset down. With a linear fill, affects location of the gradient stop.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "fill-typefillType",
+            "type": "String",
+            "desc": "Sets the background gradient fill type to either linear or radial.",
+            "example": "\"linear\" | \"radial\""
+        },
+        {
+            "name": "gradient-colorsgradientColors",
+            "type": "String",
+            "desc": "Sets a set of colors for a complex background gradient (more than 2 colors) of the object. Used with gradient stops.",
+            "example": "\"#f00 #0f0 #00f\" | ..."
+        },
+        {
+            "name": "gradient-stopsgradientStops",
+            "type": "String",
+            "desc": "Sets a set of steps corresponding for each color for a complex background gradient (more than 2 colors) of the object. Paired with gradient-colors.",
+            "example": "\"0.1 0.5 0.9\" | ..."
+        },
+        {
+            "name": "item",
+            "type": "String",
+            "desc": "Sets the item id of the map on which the object/shape is being added.",
+            "example": "\"itemid\" | ..."
+        },
+        {
+            "name": "line-colorlineColor",
+            "type": "String",
+            "desc": "Sets the line color of the object, applicable on non-closed shapes. See also border-color for closed shapes.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "line-gap-sizelineGapSize",
+            "type": "Mixed",
+            "desc": "Can be used to create custom dashed or dotted lines when used with line-segment-size.  This will control the size of the gaps between each line segment.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "line-segment-sizelineSegmentSize",
+            "type": "Mixed",
+            "desc": "Can be used to create custom dashed or dotted lines when used with line-gap-size.  This will control the size of the visible segment of line.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "line-stylelineStyle",
+            "type": "String",
+            "desc": "Sets the style applied to lines and borders of the object.",
+            "example": "\"solid\" | \"dotted\" | \"dashed\""
+        },
+        {
+            "name": "line-widthlineWidth",
+            "type": "Mixed",
+            "desc": "Sets the line width of the object, applicable on non-closed shapes. See also border-width for closed shapes.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "map",
+            "type": "String",
+            "desc": "Sets the map id of the map on which the object/shape is being added.",
+            "example": "\"mapid\" | ..."
+        },
+        {
+            "name": "offset-roffsetR",
+            "type": "Mixed",
+            "desc": "Sets a radial offset to apply when positioning the object/shape.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "offset-xoffsetX",
+            "type": "Mixed",
+            "desc": "Sets an X offset to apply when positioning the object/shape.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "offset-yoffsetY",
+            "type": "Mixed",
+            "desc": "Sets a Y offset to apply when positioning the object/shape.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "points",
+            "type": "Array",
+            "desc": "Sets the coordinates of the object/shape points.",
+            "example": "[ [10,10], [10,20], [20,20], [20,10], [10,10] ] | ..."
+        },
+        {
+            "name": "rules",
+            "type": "Array",
+            "desc": "Rules allows you to include logic within your JSON code to apply sets of attributes to certain aspects of your chart that meet a specified requirement.  See rules for usage information.",
+            "example": "[...]"
+        },
+        {
+            "name": "shadow",
+            "type": "Boolean",
+            "desc": "Sets whether the object gets a shadow or not.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "shadow-alphashadowAlpha",
+            "type": "Numeric",
+            "desc": "Sets the transparency of the shadow of the object. Values must range between 0.0 and 1.0, with 0.0 being completely invisible and 1.0 being completely opaque. Please note that values also require the leading 0 before the decimal.",
+            "example": "0.3 | 0.9 | ..."
+        },
+        {
+            "name": "shadow-angleshadowAngle",
+            "type": "Numeric",
+            "desc": "Sets the angle of the shadow underneath the object.",
+            "example": "-45 | 115 | ..."
+        },
+        {
+            "name": "shadow-blurshadowBlur",
+            "type": "Mixed",
+            "desc": "Sets the blur effect size for the shadow of the object. Has limited effect on HTML5 implementation.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "shadow-colorshadowColor",
+            "type": "String",
+            "desc": "Sets the color of the shadow of the object.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "shadow-distanceshadowDistance",
+            "type": "Mixed",
+            "desc": "Sets the distance between the shadow and the object.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "size",
+            "type": "Mixed",
+            "desc": "Sets the size of the object/shape.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "type",
+            "type": "String",
+            "desc": "Sets the type of the object/shape.",
+            "example": "\"rect\" | \"cicrcle\" | \"star5\" | \"star9\" | \"square\" | \"diamond\" | \"triangle\" | \"plus\" | \"cross\" | \"line\" | \"poly\" | \"pie\" | ..."
+        },
+        {
+            "name": "visible",
+            "type": "Boolean",
+            "desc": "Sets the visibility of the object.  Allows you to turn off the object without removing lines of JSON.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "x",
+            "type": "Mixed",
+            "desc": "Sets the X position of the object.",
+            "example": "10 | \"20px\" | 0.3 | \"30%\" | ..."
+        },
+        {
+            "name": "y",
+            "type": "Mixed",
+            "desc": "Sets the Y position of the object.",
+            "example": "10 | \"20px\" | 0.3 | \"30%\" | ..."
+        },
+        {
+            "name": "z-indexzIndex",
+            "type": "Numeric",
+            "desc": "Sets the z position of the object. Objects with higher z indexes will appear \"above\" those with lower z index values.",
+            "example": "5 | 10 | ..."
+        }
+    ]
+}

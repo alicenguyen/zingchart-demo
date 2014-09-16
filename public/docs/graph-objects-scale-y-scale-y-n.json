@@ -1,0 +1,379 @@
+{
+    "name": "scale-y-scale-y-n",
+    "type": "graph-objects",
+    "desc": "The \"scale-y\":{} objects are used to manipulate and style the y axis.  It is also possible to add additional y-axes by including objects such as \"scale-y-2\":{}, \"scale-y-3\":{}, etc.",
+    "attrs": [
+        {
+            "name": "alpha",
+            "type": "Numeric",
+            "desc": "Sets the text's transparency of the scale-y (The vertical scale line on the chart).",
+            "example": "0.3 | 0.9 | ..."
+        },
+        {
+            "name": "angle",
+            "type": "Numeric",
+            "desc": "Sets the rotation angle of the object/shape.",
+            "example": "-45 | 115 | ..."
+        },
+        {
+            "name": "auto-fitautoFit",
+            "type": "Boolean",
+            "desc": "",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "decimals",
+            "type": "Numeric",
+            "desc": "Sets the number of decimals which will be displayed as scale-x values. Note this attribute does round the values to fit within the define number of decimals.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "decimals-separatordecimalsSeparator",
+            "type": "String",
+            "desc": "Sets the separator to be used in place of the default decimal point. Any string or character can be used to replace the decimal.",
+            "example": "\".\" | \",\" | ..."
+        },
+        {
+            "name": "exponent",
+            "type": "Boolean",
+            "desc": "Sets whether the scale values will be displayed in exponential notation. Particularly useful when dealing with large numbers.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "exponent-decimalsexponentDecimals",
+            "type": "Numeric",
+            "desc": "Sets the number of decimals that will be displayed when using exponential notation. This allows scale values to be more precise.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "format",
+            "type": "String",
+            "desc": "Allows you to set the format for the scale-x values.",
+            "example": "\"%v%\" | \"$%v\" | \"%v\" | ..."
+        },
+        {
+            "name": "guide",
+            "type": "Object",
+            "desc": "Including the \"guide\":{ } object within the \"scale-y:{ } object allows you to control the lines perpendicular to the y-axis which create the grid in the background. You can use attributes within the \"guide:{ } object to change the look of the lines.",
+            "example": "{...}"
+        },
+        {
+            "name": "item",
+            "type": "String",
+            "desc": "Including the \"item\":{} object within \"scale-y\":{} allows you to manipulate and style to y axis values",
+            "example": "\"itemid\" | ..."
+        },
+        {
+            "name": "items-overlapitemsOverlap",
+            "type": "Boolean",
+            "desc": "Setting the items-overlap attribute to true forces all scale x items to show",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "label",
+            "type": "Object",
+            "desc": "Including the \"label\":{ } object within \"scale-y\":{ } allows you to add a label to the y axis.  You can then add attributes within the \"label\":{ } object to manipulate and style to label.",
+            "example": "{...}"
+        },
+        {
+            "name": "labels",
+            "type": "Array",
+            "desc": "Allows you to set custom labels that correspond to each of the ticks on a scale. If there are more ticks than labels, the default values will be used for the remaining labels.",
+            "example": "[\"Jan\", \"Feb\", \"Mar\", ...] | ..."
+        },
+        {
+            "name": "layout",
+            "type": "String",
+            "desc": "",
+            "example": "\"\"horizontal\" | \"h\" | \"vertical\" | \"v\" | \"row x col\" | \"x col\" | \"row x\" | \"float\"\""
+        },
+        {
+            "name": "line-colorlineColor",
+            "type": "String",
+            "desc": "Sets the line color of the object, applicable on non-closed shapes. See also border-color for closed shapes.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "line-gap-sizelineGapSize",
+            "type": "Mixed",
+            "desc": "Can be used to create custom dashed or dotted lines when used with line-segment-size.  This will control the size of the gaps between each line segment.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "line-segment-sizelineSegmentSize",
+            "type": "Mixed",
+            "desc": "Can be used to create custom dashed or dotted lines when used with line-gap-size.  This will control the size of the visible segment of line.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "line-stylelineStyle",
+            "type": "String",
+            "desc": "Sets the style applied to lines and borders of the object.",
+            "example": "\"solid\" | \"dotted\" | \"dashed\""
+        },
+        {
+            "name": "line-widthlineWidth",
+            "type": "Mixed",
+            "desc": "Sets the line width of the object, applicable on non-closed shapes. See also border-width for closed shapes.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "margin",
+            "type": "Mixed",
+            "desc": "Sets the object's margin/s.",
+            "example": "10 | \"5px\" | \"10 20\" | \"5px 10px 15px 20px\" | ..."
+        },
+        {
+            "name": "margin-bottommarginBottom",
+            "type": "Mixed",
+            "desc": "Sets the object's bottom margin.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "margin-leftmarginLeft",
+            "type": "Mixed",
+            "desc": "Sets the object's left margin.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "margin-rightmarginRight",
+            "type": "Mixed",
+            "desc": "Sets the object's right margin.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "margin-topmarginTop",
+            "type": "Mixed",
+            "desc": "Sets the object's top margin.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "markers",
+            "type": "Array",
+            "desc": "Including the markers object within scale y will allow you to create both \"type\":\"area\" and \"type\":\"line\" markers which run perpendicular to the y axis.",
+            "example": "[...]"
+        },
+        {
+            "name": "max-itemsmaxItems",
+            "type": "Numeric",
+            "desc": "Sets the max number of values displaying along the bottom horizontal line.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "max-labelsmaxLabels",
+            "type": "Numeric",
+            "desc": "Sets the maximum number of labels that will display along the axis.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "max-ticksmaxTicks",
+            "type": "Numeric",
+            "desc": "Sets the maximum number of ticks to display on the y axis.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "max-valuemaxValue",
+            "type": "Numeric",
+            "desc": "Sets the maximum value for the y axis. \"max-value\": is one of the multiple ways you can set y axis values. Commonly used with time series data. Also see \"mix-value\": and \"step\":",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "min-valueminValue",
+            "type": "Numeric",
+            "desc": "Sets the minimum value for the y axis. \"min-value\": is one of the multiple ways you can set y axis values. Commonly used with time series data. Also see \"max-value\": and \"step\":",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "minor-guideminorGuide",
+            "type": "Object",
+            "desc": "Including the \"minor-guide\":{} object will allow you to create and style gridlines on \"minor-ticks\".  Note you must also include the necessary objects and attributes to include minor ticks.",
+            "example": "{...}"
+        },
+        {
+            "name": "minor-tickminorTick",
+            "type": "Object",
+            "desc": "Including the \"minor-tick\":{} object within \"scale-y\":{} will allow you to manipulate/style minor ticks.  Note the \"minor-ticks\": attribute must be used to set the number of minor ticks.",
+            "example": "{...}"
+        },
+        {
+            "name": "minor-ticksminorTicks",
+            "type": "Numeric",
+            "desc": "Sets the number of \"minor-ticks\": which will be place between each tick.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "mirrored",
+            "type": "Boolean",
+            "desc": "Setting \"mirrored\":true will flip/mirror the y axis values.  \"scale-y\":{} values will read top to bottom.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "multiplier",
+            "type": "Boolean",
+            "desc": "Setting \"multiplier\":true will abbreviate long numbers as small digits with a short unit indicator such as K, M, B",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "negation",
+            "type": "String",
+            "desc": "Sets the negative symbol just outside of the formatted value.",
+            "example": "\"standard\" | \"currency\""
+        },
+        {
+            "name": "offset",
+            "type": "Numeric",
+            "desc": "Sets an offset on both sides of the plotted data.  This will cause the data to appear as if it were \"squeezed\" together.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "offset-endoffsetEnd",
+            "type": "Numeric",
+            "desc": "Sets an offset from the end of the plotted data.  This will cause the data to appear as if it were \"squeezed\" from the top side.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "offset-startoffsetStart",
+            "type": "Numeric",
+            "desc": "Sets an offset at the start of the plotted data.  This will cause the data to appear as if it were \"squeezed\" from the bottom side.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "offset-xoffsetX",
+            "type": "Mixed",
+            "desc": "Sets an x offset that will be applied to the scale-y object.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "offset-yoffsetY",
+            "type": "Mixed",
+            "desc": "Sets a y offset that will be applied to the scale-y object.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "progression",
+            "type": "String",
+            "desc": "Sets whether the scale used is linear or logarithmic.",
+            "example": "\"lin\" | \"log\""
+        },
+        {
+            "name": "ref-anglerefAngle",
+            "type": "Numeric",
+            "desc": "",
+            "example": "-45 | 115 | ..."
+        },
+        {
+            "name": "ref-linerefLine",
+            "type": "Object",
+            "desc": "The \"ref-line\":{} object is used to create reference lines that appear behind the chart data.  This can be used to highlight specific information or to direct attention to certain areas of your chart.",
+            "example": "{...}"
+        },
+        {
+            "name": "ref-valuerefValue",
+            "type": "Numeric",
+            "desc": "Sets a reference line along the y axis at the specified value.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "rules",
+            "type": "Array",
+            "desc": "Rules allows you to include logic within your JSON code to apply sets of attributes to certain aspects of your chart that meet a specified requirement.  See rules for usage information.",
+            "example": "[...]"
+        },
+        {
+            "name": "scale-factorscaleFactor",
+            "type": "Numeric",
+            "desc": "Sets the scale of the y axis",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "short",
+            "type": "Boolean",
+            "desc": "Setting to true will cause the values on the y axis to use an abbreviated notation with a short unit such as K,M,B, etc.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "short-unitshortUnit",
+            "type": "String",
+            "desc": "Specifies which unit of measure to use when short is set to true.",
+            "example": "\"k\" | \"K\" | \"m\" | \"M\" | \"b\" | \"B\""
+        },
+        {
+            "name": "show-labelsshowLabels",
+            "type": "Array",
+            "desc": "Specifies which labels will be visible on the y axis.",
+            "example": "[\"A\", \"B\"] | ..."
+        },
+        {
+            "name": "size",
+            "type": "Mixed",
+            "desc": "Sets the size of the object/shape.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "size-factor",
+            "type": "String",
+            "desc": "Auto size-factor automatically scales a pie chart to allow all value-box objects to appear without clipping.",
+            "example": "\"auto\""
+        },
+        {
+            "name": "step",
+            "type": "Mixed",
+            "desc": "The \"step\": attribute sets the value of each step along an axis.  When using numeric values along the axis, a numeric value for \"step\": will incrementally increase the value of each tick along the axis by the specified step value.When the transform attribute is set to \"type\":\"date\", a number of different step values can then be used to modify the step increments. See transform for more information on how to implement various date and time formats.",
+            "example": "5 | 10 | \"msecond\" | \"second\" | \"minute\" | \"hour\" | \"day\" | \"month\" | \"year\" | ..."
+        },
+        {
+            "name": "thousands-separatorthousandsSeparator",
+            "type": "String",
+            "desc": "Sets the characters used to separate thousands in larger numbers.",
+            "example": "\".\" | \",\" | ..."
+        },
+        {
+            "name": "tick",
+            "type": "Object",
+            "desc": "Including the \"tick\":{} object within \"scale-y\":{} allows you to manipulate and style the ticks along the y axis.",
+            "example": "{...}"
+        },
+        {
+            "name": "transform",
+            "type": "Object",
+            "desc": "Allows data to be transformed into a customizable format to display dates and times.",
+            "example": "{...}"
+        },
+        {
+            "name": "values",
+            "type": "Mixed",
+            "desc": "The \"values\": attribute allows you to set the scale for the y axis. This can be done in a few different ways. You can use an array of integers. You can set a min and max value. You can set a min value max value and step. You can also create a sting of values. Note you can also use \"mix-value\": \"max-value\": and \"step\": attributes to set the scale of the y-axis.",
+            "example": "[1, 7, 9] | \"0:100\" | \"0:100:20\" | ..."
+        },
+        {
+            "name": "visible",
+            "type": "Boolean",
+            "desc": "You can set the \"scale-y\":{ } to \"visible\":false to hide the y axis.  The y-axis will still calculate plots correctly, however you will not be able to see the x axis line or any of the attributes such as scale values.  If you simply want to hide the x axis line you can utilize \"line-color\":\"none\".  This will remove the visibility of the x axis line and still allow you to style ticks, items, etc separately,",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "zoom-snapzoomSnap",
+            "type": "Boolean",
+            "desc": "When zooming is enabled, setting zoom-snap to true snaps the zoom area to the nearest data node as a zoom area is selected.  By default, zoom-snap is set to false.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "zoom-tozoomTo",
+            "type": "Array",
+            "desc": "Sets the scale-y values that the chart will zoom to by default on chart render. Note the \"preview\":{} object or the \"scroll-y\":{} object are recommended to provide users with a way to view the rest of the chart data.",
+            "example": "[20, 50] | ..."
+        },
+        {
+            "name": "zoom-to-valueszoomToValues",
+            "type": "Array",
+            "desc": "Sets the scale-y values that the chart will zoom to by default on chart render when \"scale-y\":{} \"values\":[\"\",\"\"] are defined as a string. Note the \"preview\":{ } object or the \"scroll-y\":{} object are recommended to provide users with a way to view the rest of the chart data.",
+            "example": "[1000, 2000] | ..."
+        },
+        {
+            "name": "zooming",
+            "type": "Boolean",
+            "desc": "Allows users to zoom parallel to the y axis of the chart. Click and drag on the chart to select zoom area. Can be use with \"scale-y\":{} zooming to allow users horizontal and vertical zooming abilities.",
+            "example": "true | false | 1 | 0"
+        }
+    ]
+}

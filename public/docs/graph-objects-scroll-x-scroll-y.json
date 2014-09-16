@@ -1,0 +1,19 @@
+{
+    "name": "scroll-x-scroll-y",
+    "type": "graph-objects",
+    "desc": "Sets the definition for the graph's scroll-x/scroll-y object.  This will include a scroll bar within the chart on the defined scale axis.  Note \"zooming\":true and \"zoom-to\":[,] attributes must be set within the corresponding \"scale-x\" or \"scale-y\" object.",
+    "attrs": [
+        {
+            "name": "bar",
+            "type": "Object",
+            "desc": "Allows you to style the scroll bar.  For more information on how to style the scroll bar, see bar.",
+            "example": "{...}"
+        },
+        {
+            "name": "handle",
+            "type": "Object",
+            "desc": "Allows you to style the handle used for scrolling.  For more information on how to style the scroll handle, see handle.",
+            "example": "{...}"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "name": "icon",
+    "type": "legend-objects",
+    "desc": "When a legend is set to draggable with an icon drag-handler, the icon object allows you to customize the appearance of the drag-handler icon.",
+    "attrs": [
+        {
+            "name": "alpha",
+            "type": "Numeric",
+            "desc": "Sets the transparency of the object. Values must range between 0.0 and 1.0, with 0.0 being completely invisible and 1.0 being completely opaque. Please note that values also require the leading 0 before the decimal.",
+            "example": "0.3 | 0.9 | ..."
+        },
+        {
+            "name": "line-colorlineColor",
+            "type": "String",
+            "desc": "Sets the line color of the object, applicable on non-closed shapes. See also border-color for closed shapes.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "line-widthlineWidth",
+            "type": "Mixed",
+            "desc": "Sets the line width of the object, applicable on non-closed shapes. See also border-width for closed shapes.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "offset-xoffsetX",
+            "type": "Mixed",
+            "desc": "Sets an X offset to apply when positioning the object/shape.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "offset-yoffsetY",
+            "type": "Mixed",
+            "desc": "Sets a Y offset to apply when positioning the object/shape.",
+            "example": "4 | \"6px\" | ..."
+        }
+    ]
+}

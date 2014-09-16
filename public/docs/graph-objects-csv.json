@@ -1,0 +1,73 @@
+{
+    "name": "csv",
+    "type": "graph-objects",
+    "desc": "Allows you to either import data from an external CSV file (and a few other similar file types) or import data using a data string within the JSON code.",
+    "attrs": [
+        {
+            "name": "columns",
+            "type": "Array",
+            "desc": "In case of fixed width column format of the CSV data, specifies the dimensions for each column. Some csv files are formatted based on the idea of \"fixed sized columns\", not by the standard comma or semicolon \"separator\". So, the columns array holds the number of characters for each column so that the parser will be able to split each line in the correct way",
+            "example": "[...]"
+        },
+        {
+            "name": "data-stringdataString",
+            "type": "String",
+            "desc": "Sets the CSV data directly embedded in the JSON, as a string. However new-line characters are not allowed in the definition of an attribute in json syntax, and therefore the row separator character will likely need also be overridden with the \"row-separator\" attribute if \"data-string\" is used in place of \"url\".",
+            "example": "\"Apple,25,34"
+        },
+        {
+            "name": "horizontal-labelshorizontalLabels",
+            "type": "Boolean",
+            "desc": "Specifies if the CSV data contains descriptive headers for each column as the first or second row (depending on title presence).",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "mirrored",
+            "type": "Boolean",
+            "desc": "Specifies if the CSV data should be processed in a mirrored way (per line instead of per column).  Note the different format used for the data-string.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "row-separatorrowSeparator",
+            "type": "String",
+            "desc": "Sets the separator between the data rows when using a data-string instead of an external .CSV file. The default value is \"",
+            "example": "\"."
+        },
+        {
+            "name": "separate-scalesseparateScales",
+            "type": "Boolean",
+            "desc": "Specifies whether or not each column in the csv data should have its own scale on the chart.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "separator",
+            "type": "String",
+            "desc": "Sets the separator between the data cells, default is \",\".  Any single character can be used as a separator.",
+            "example": "\"*\" | \"/\" | \",\" | ..."
+        },
+        {
+            "name": "smart-scalessmartScales",
+            "type": "Boolean",
+            "desc": "Smart-Scales will analyze the CSV data to determine if each column of data is of a different enough type of data to deserve a separate scale. If it is, smart-scales will assign the unique data columns to separate scales.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "title",
+            "type": "Boolean",
+            "desc": "Specifies if the CSV data contains a descriptive title on the first line. If this attribute it not included, then the library looks at the data to decide if the first line is intended to be a title or not. If it thinks it is, The first line will become the title of the graph. If there is a title line in the CSV and \"title\":\"true\" is set, the first line will be the graph title, but if \"title\":\"false\" is specified, that first line will become a scale-label.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "url",
+            "type": "String",
+            "desc": "Sets the url for the CSV data source.",
+            "example": "\"http://www.domain.com/link.php\" | \"%FILEPATH%/fruit.csv\" | \"/resources/datacsv.txt\" | ..."
+        },
+        {
+            "name": "vertical-labelsverticalLabels",
+            "type": "Boolean",
+            "desc": "Specifies if the CSV data contains descriptive headers for each row.",
+            "example": "true | false | 1 | 0"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "name": "gui",
+    "type": "loader",
+    "desc": "",
+    "attrs": [
+        {
+            "name": "behaviors",
+            "type": "Array",
+            "desc": "Collection of settings for the context menu items.",
+            "example": "[...]"
+        },
+        {
+            "name": "context-menucontextMenu",
+            "type": "Object",
+            "desc": "Collection of settings for the context menu and context menu items.",
+            "example": "{...}"
+        }
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "name": "crosshair-x-crosshair-y",
+    "type": "graph-objects",
+    "desc": "Sets the styling options for crosshair-x and crosshair-y objects.  Crosshairs appear when users mouseover data on a chart.",
+    "attrs": [
+        {
+            "name": "plot-labelplotLabel",
+            "type": "Object",
+            "desc": "Sets the definition for the crosshair-x plot labels.",
+            "example": "{...}"
+        },
+        {
+            "name": "scale-labelscaleLabel",
+            "type": "Object",
+            "desc": "Sets the definition for the crosshair-x and crosshair-y scale labels.",
+            "example": "{...}"
+        },
+        {
+            "name": "exact",
+            "type": "Boolean",
+            "desc": "When true, plot nodes will be highlighted only when the guide is directly next to the node. When false (the default setting), the plot nodes closest to the guide will be highlighted.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "trigger",
+            "type": "String",
+            "desc": "Sets the mode used to display crosshair plot-labels. When set to \"move\" (the default setting), plot-labels for all nodes will be displayed. The \"hover\" setting will allow only one plot-label to be displayed at a time, with the visibility of each label being triggered when the user hovers over a node.",
+            "example": "\"move\" | \"hover\""
+        },
+        {
+            "name": "type",
+            "type": "String",
+            "desc": "Applies only on crosshair-y. Sets the type of the crosshair-y, either in single mode (one line for all scales) or multiple (a line for every plot).",
+            "example": "\"single\" | \"multiple\""
+        },
+        {
+            "name": "alpha",
+            "type": "Numeric",
+            "desc": "Sets the transparency of the object. Values must range between 0.0 and 1.0, with 0.0 being completely invisible and 1.0 being completely opaque. Please note that values also require the leading 0 before the decimal.",
+            "example": "0.3 | 0.9 | ..."
+        },
+        {
+            "name": "line-colorlineColor",
+            "type": "String",
+            "desc": "Sets the line color of the object, applicable on non-closed shapes. See also border-color for closed shapes.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "line-gap-sizelineGapSize",
+            "type": "Mixed",
+            "desc": "Can be used to create custom dashed or dotted lines when used with line-segment-size.  This will control the size of the gaps between each line segment.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "line-segment-sizelineSegmentSize",
+            "type": "Mixed",
+            "desc": "Can be used to create custom dashed or dotted lines when used with line-gap-size.  This will control the size of the visible segment of line.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "line-stylelineStyle",
+            "type": "String",
+            "desc": "Sets the style applied to lines and borders of the object.",
+            "example": "\"solid\" | \"dotted\" | \"dashed\""
+        },
+        {
+            "name": "line-widthlineWidth",
+            "type": "Mixed",
+            "desc": "Sets the line width of the object, applicable on non-closed shapes. See also border-width for closed shapes.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "visible",
+            "type": "Boolean",
+            "desc": "Sets the visibility of the object.  Allows you to turn off the object without removing lines of JSON.",
+            "example": "true | false | 1 | 0"
+        }
+    ]
+}

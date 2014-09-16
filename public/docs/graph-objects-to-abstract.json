@@ -1,0 +1,37 @@
+{
+    "name": "to-abstract",
+    "type": "graph-objects",
+    "desc": "Allows you to set the ending point of an arrow to either a predetermined [x, y] coordinate on the chart, or to a charted value.",
+    "attrs": [
+        {
+            "name": "hook",
+            "type": "String",
+            "desc": "Sets the arrow's end point to that of a charted value.  The plot value refers to the set of values in a series, and the index refers to the specific value within that series.  For example, node:plot=0,index=10 sets the end point of the arrow at the 11th value within the 1st set of values in the series.  Note that 0 refers to the first value or set of values, with 1 being the second value or set of values, and so on.",
+            "example": "\"node:index=4\" | \"node:plot=0,index=1\" | ..."
+        },
+        {
+            "name": "offset-xoffsetX",
+            "type": "Numeric",
+            "desc": "Sets an x-offset for the arrow's end point.  Can be used to make adjustments to an arrow's end x ordinate or hook point.",
+            "example": "10 | 56 | ..."
+        },
+        {
+            "name": "offset-yoffsetY",
+            "type": "Numeric",
+            "desc": "Sets a y-offset for the arrow's end point.  Can be used to make adjustments to an arrow's end y ordinate or hook point.",
+            "example": "10 | 56 | ..."
+        },
+        {
+            "name": "x",
+            "type": "Numeric",
+            "desc": "Sets the x ordinate for an arrow's end point.  Ordinates are counted in pixels, starting from the top-left corner of the chart.",
+            "example": "100 | 450 | ..."
+        },
+        {
+            "name": "y",
+            "type": "Numeric",
+            "desc": "Sets the y ordinate for an arrow's end point.  Ordinates are counted in pixels, starting from the top-left corner of the chart.",
+            "example": "100 | 450 | ..."
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+[
+	{	"id": 0,
+		"name"  : "context-menu",
+		"title" : "Context-Menu Objects",
+		"objects" : [
+			{ "id": "context-menu-objects-button" },
+			{ "id": "context-menu-objects-custom-item-abstract" },
+			{ "id": "context-menu-objects-gear" },
+			{ "id": "context-menu-objects-item" }
+		]
+	}, {
+		"id" : 1,
+		"name": "graph-objects",
+		"title": "Graph Objects",
+		"objects": [
+			{ "id": "graph-objects-3d-aspect" },
+			{ "id": "graph-objects-arrows" },
+			{ "id": "graph-objects-bar" },
+			{ "id": "graph-objects-crosshair-x-crosshair-y" },
+			{ "id": "graph-objects-csv" },
+			{ "id": "graph-objects-curtain" },
+			{ "id": "graph-objects-from-abstract" },
+			{ "id": "graph-objects-handle-preview" },
+			{ "id": "graph-objects-handle-scroll" },
+			{ "id": "graph-objects-images" },
+			{ "id": "graph-objects-labels" },
+			{ "id": "graph-objects-legend" },
+			{ "id": "graph-objects-plot-series-item" },
+			{ "id": "graph-objects-plotarea" },
+			{ "id": "graph-objects-preview" },
+			{ "id": "graph-objects-refresh" },
+			{ "id": "graph-objects-scale-r" },
+			{ "id": "graph-objects-scale-x-scale-x-n" },
+			{ "id": "graph-objects-scale-y-scale-y-n" },
+			{ "id": "graph-objects-scroll-x-scroll-y" },
+			{ "id": "graph-objects-shapes" },
+			{ "id": "graph-objects-source" },
+			{ "id": "graph-objects-subtitle" },
+			{ "id": "graph-objects-title" },
+			{ "id": "graph-objects-to-abstract" },
+			{ "id": "graph-objects-tooltip" },
+			{ "id": "graph-objects-widthget-abstract" },
+			{ "id": "graph-objects-zoom" }
+		]
+	}, {
+		"id" : 2,
+		"name": "gui",
+		"title": "Gui Objects",
+		"objects": [ 
+			{ "id": "gui-objects-behaviors" },
+			{ "id": "gui-objects-context-menu" },
+			{ "id": "gui-objects-inherit" }
+			]
+	}, {
+		"id" : 3,
+		"name": "legend",
+		"title": "Legend Objects",
+		"objects": [
+			{ "id": "legend-objects-footer"},
+			{ "id": "legend-objects-header"},
+			{ "id": "legend-objects-icon"},
+			{ "id": "legend-objects-item-off"},
+			{ "id": "legend-objects-item"},
+			{ "id": "legend-objects-mark"}
+		]
+	}
+	]

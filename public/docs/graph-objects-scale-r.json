@@ -1,0 +1,25 @@
+{
+    "name": "scale-r",
+    "type": "graph-objects",
+    "desc": "Certain types of charts, such as gauge charts, do not use \"scale-x\":{} or \"scale-y\":{} objects.  Instead, \"scale-r\":{} should be used to customize the scales of these charts.",
+    "attrs": [
+        {
+            "name": "aperture",
+            "type": "Numeric",
+            "desc": "On a gauge chart, the \"aperture\":{} attribute is used to narrow or widen the visible angle of the gauge.  By default, this is set to 180, which displays a half circle.",
+            "example": "180 | \"90\" | 120 | ..."
+        },
+        {
+            "name": "center",
+            "type": "Object",
+            "desc": "On a gauge chart, the \"center\":{} object is used to style the point at which the gauge pivots.",
+            "example": "{...}"
+        },
+        {
+            "name": "ring",
+            "type": "Object",
+            "desc": "On a gauge chart, the \"ring\":{} object is used to style the ring that appears around the outside edge of the gauge.",
+            "example": "{...}"
+        }
+    ]
+}

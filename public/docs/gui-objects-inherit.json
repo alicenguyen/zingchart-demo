@@ -1,0 +1,6 @@
+{
+    "name": "inherit",
+    "type": "gui-objects",
+    "desc": "When a GUI object is configured outside of the graphset object, setting 'inherit' to 'none' within a graph object will disable inheritance, resulting in the default context-menu being used for that graph.",
+    "attrs": []
+}

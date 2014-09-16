@@ -1,0 +1,691 @@
+{
+    "name": "plot-series-item",
+    "type": "graph-objects",
+    "desc": "Objects and attributes can be included within the \"plot\":{} object and will affect all plot indexes on the chart.  You can also include objects and attributes to specific value sets within the \"series\":[]  This allows you to manipulate and style specific plot indexes.",
+    "attrs": [
+        {
+            "name": "active-areaactiveArea",
+            "type": "Boolean",
+            "desc": "Allow tooltips and API events to be triggered by the area under a plot.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "alpha-areaalphaArea",
+            "type": "Numeric",
+            "desc": "Sets the level of transparency for the area of a chart.",
+            "example": "0.3 | 0.9 | ..."
+        },
+        {
+            "name": "animation",
+            "type": "Object",
+            "desc": "Sets and customizes the animation used on chart load and reload.  See animation for more information on how to configure animations.",
+            "example": "{...}"
+        },
+        {
+            "name": "aspect",
+            "type": "String",
+            "desc": "Changing the aspect of a chart within the \"plot\":{} object will modify the way the plots are drawn for every plot.  \"aspect\":\" \" can be added to individual value sets if the goal is to change the aspect of individual lines, bars, etc.",
+            "example": "\"cone\" | \"cylinder\" | \"pyramid\" | \"histogram\" | \"stepped\" | \"spline\" | \"segmented\" | ..."
+        },
+        {
+            "name": "background-markerbackgroundMarker",
+            "type": "Object",
+            "desc": "Sets the styling for markers which are not selected.",
+            "example": "{...}"
+        },
+        {
+            "name": "background-statebackgroundState",
+            "type": "Object",
+            "desc": "This object sets the style for plots when using background-mode and selection mode.  The plots which are not included within the \"selection\":[1,5,9,...] will inherit their style from the \"background-state\":{ } object",
+            "example": "{...}"
+        },
+        {
+            "name": "band-spacebandSpace",
+            "type": "Numeric",
+            "desc": "This attribute is used to set the space between band in nested pie charts (\"type\":\"nestedpie\").",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "bar-spacebarSpace",
+            "type": "Numeric",
+            "desc": "Sets the amount of space between each bar in a single plot index.",
+            "example": "\"10\" | \"10%\" | \"10px\""
+        },
+        {
+            "name": "bar-widthbarWidth",
+            "type": "Numeric",
+            "desc": "Sets the width of each bar.",
+            "example": "\"10\" | \"10%\" | \"10px\""
+        },
+        {
+            "name": "bars-overlapbarsOverlap",
+            "type": "Numeric",
+            "desc": "Defines how much the bars in each plot index should overlap.",
+            "example": "\"10\" | \"10%\" | \"10px\""
+        },
+        {
+            "name": "bars-space-leftbarsSpaceLeft",
+            "type": "Numeric",
+            "desc": "Defines the spacing to the left of the bars at each index position.",
+            "example": "\"10\" | \"10%\" | \"10px\""
+        },
+        {
+            "name": "bars-space-rightbarsSpaceRight",
+            "type": "Numeric",
+            "desc": "Defines the spacing to the right of the bars at each index position.",
+            "example": "\"10\" | \"10%\" | \"10px\""
+        },
+        {
+            "name": "contour-on-topcontourOnTop",
+            "type": "Boolean",
+            "desc": "Sets whether the contour lines on area plots will be on top of all areas or will be hidden by the next area plot on top of it.  You will notice when the attribute is set to true the lines are all set above the shaded regions.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "csize",
+            "type": "Numeric",
+            "desc": "Controls the width of the arrows when using gauges.",
+            "example": "\"10\" | \"10%\" | \"10px\""
+        },
+        {
+            "name": "cursor",
+            "type": "String",
+            "desc": "Sets the style of the cursor when hovering over a node.",
+            "example": "\"hand\" | \"normal\""
+        },
+        {
+            "name": "data-...",
+            "type": "String",
+            "desc": "This attribute allows you to create custom tokens and associate static or dynamic data to them.  This attribute can be used almost anywhere in a chart.",
+            "example": "\"Some Text\" | ..."
+        },
+        {
+            "name": "decimals",
+            "type": "Numeric",
+            "desc": "Using the decimals attribute will allow you to set the number of decimal places associated to each value.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "decimals-separatordecimalsSeparator",
+            "type": "String",
+            "desc": "The \"decimals-separator\": attribute allows you to set what type of punctuation the will be used in the decimal place.",
+            "example": "\".\" | \",\" | ..."
+        },
+        {
+            "name": "description",
+            "type": "String",
+            "desc": "This attribute sets description text for the plot which can be addressed in various areas with %d or %plot-description tokens",
+            "example": "\"Some Text\" | ..."
+        },
+        {
+            "name": "error",
+            "type": "Object",
+            "desc": "The \"error\":{ } object controls the style of the error bars.  The values for these bars is set with an array in the \"errors\": attribute.",
+            "example": "{...}"
+        },
+        {
+            "name": "errors",
+            "type": "Array",
+            "desc": "An array of items specifying the value of error bars for items in the plot. Error can be specified using a specific max error and min error respectively, or both at once. See demo with informational tooltips. Note errors can be set for all plot indexes within the \"plot\":{} object or they can be set within each series value set.",
+            "example": "[...]"
+        },
+        {
+            "name": "exact",
+            "type": "Boolean",
+            "desc": "By default ZingChart uses sampling when rendering charts.  This helps improve rendering speeds and typically does not effect the appearance of the chart.  However, using the attribute \"exact\":true within the \"plot\":{ } object forces ZingChart to render all nodes.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "exponent",
+            "type": "Boolean",
+            "desc": "This attribute sets the values to scientific notation",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "exponent-decimalsexponentDecimals",
+            "type": "Numeric",
+            "desc": "This attribute set the number of decimals to be used when using exponents for scientific notation",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "goal",
+            "type": "Object",
+            "desc": "The \"goal\":{} object allows the addition of attributes to style the goal markers",
+            "example": "{...}"
+        },
+        {
+            "name": "goals",
+            "type": "Array",
+            "desc": "Accepts numerical values. Determines where goals are set for all plots.  The \"goals\":[ ] values can also be set individually within each value set.",
+            "example": "[45, 70, 60]"
+        },
+        {
+            "name": "group-selectionsgroupSelections",
+            "type": "Boolean",
+            "desc": "When true, automatically selects all nodes with the same scale index as the selected node. The selection-mode attribute must also be set.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "highlight",
+            "type": "Boolean",
+            "desc": "When true, highlights the corresponding series upon mouseover of legend items.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "hover-markerhoverMarker",
+            "type": "Object",
+            "desc": "Using the \"hover-marker\":{ } object allows you to add styling attributes which will be triggered when hovering over individual markers.  \"hover-marker\":{ } can be used within the \"plot\":{ } object and will effect all markers, or you can place \"hover-marker\":{ } within \"series\":[ ] values sets to style individual plot indexes.",
+            "example": "{...}"
+        },
+        {
+            "name": "hover-modehoverMode",
+            "type": "String",
+            "desc": "Sets the objects to be highlighted upon mouseover of a series.",
+            "example": "\"plot\" | \"node\""
+        },
+        {
+            "name": "hover-statehoverState",
+            "type": "Object",
+            "desc": "Using the \"hover-state\":{ } object allows you to add styling attributes which will be triggered when hovering over individual plots.  \"hover-state\":{ } can be used within the \"plot\":{ } object and will effect all markers, or you can place \"hover-marker\":{ } within \"series\":[ ] values sets to style individual plot indexes.",
+            "example": "{...}"
+        },
+        {
+            "name": "join",
+            "type": "Array",
+            "desc": "The join attribute is specific to venn charts.  This attribute allow you to set the values for the area to be shared between each node.",
+            "example": "[30]"
+        },
+        {
+            "name": "legend-itemlegendItem",
+            "type": "Object",
+            "desc": "The \"legend-item\":{ } object allows you to style and manipulate the text for each legend item.",
+            "example": "{...}"
+        },
+        {
+            "name": "legend-markerlegendMarker",
+            "type": "Object",
+            "desc": "The \"legend-marker\":{ } object allows you to style the markers on the legend.",
+            "example": "{...}"
+        },
+        {
+            "name": "legend-textlegendText",
+            "type": "String",
+            "desc": "The \"legend-text\": attribute is typically used within \"series\":[ ] value sets.  Using this attribute allows you to associate both a \"text\":\" \" and \"legend-text\":\" \" to each value set",
+            "example": "\"Some Text\" | ..."
+        },
+        {
+            "name": "marker",
+            "type": "Object",
+            "desc": "Using the \"marker\":{ } within \"plot\":{ } allows you to style markers associated to all plots.  You can also use \"marker\":{ } within individual \"series\":[ ] values to style each value set individually.",
+            "example": "{...}"
+        },
+        {
+            "name": "max-nodesmaxNodes",
+            "type": "Numeric",
+            "desc": "Applies to charts such as line and area which have markers. When there are too many markers for the chart ZingChart does not display all markers. Example 1000 nodes on a 300px wide chart. Setting max-nodes will override the default setting and force nodes to be displayed.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "max-ratiomaxRatio",
+            "type": "Numeric",
+            "desc": "Piano chart only. Sets a maximum ratio applied to the value of the node when calculating its aspect.",
+            "example": "0 | 0.4 | ..."
+        },
+        {
+            "name": "max-sizemaxSize",
+            "type": "Numeric",
+            "desc": "Defines the maximum size of the bubble if the value representing size is not sharing the same ratio with the value scale.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "max-trackersmaxTrackers",
+            "type": "Numeric",
+            "desc": "Sets the maximum numbers of nodes for which a tracking area will be created.  This is best used to optimize charts with large sets of data.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "mid-pointmidPoint",
+            "type": "Boolean",
+            "desc": "Sets whether or not a node is wrapped equally before and after its position.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "min-ratiominRatio",
+            "type": "Numeric",
+            "desc": "Piano chart only. Sets a minimum ratio applied to the value of the node when calculating its aspect.",
+            "example": "0 | 0.4 | ..."
+        },
+        {
+            "name": "monotone",
+            "type": "Boolean",
+            "desc": "Sets whether monotone interpolation is used for charts using the \"spline\" aspect.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "multiplier",
+            "type": "Boolean",
+            "desc": "Setting \"multiplier\":true will take large numbers such as thousands, millions, etc and replace the full number with an abbreviated notation with a short unit such as K, M, B, etc",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "negation",
+            "type": "String",
+            "desc": "This attribute will determine how negative values are handled. When using \"format\":\"$%v\" setting \"negation\":\"currency\" will move the - symbol to the outside of the $ sign.  When using \"negation\" within the \"plot\":{ } object you will see changes in things such as tooltips or anywhere else series data is used to populate values.  You need to set \"negation\" in things such as \"scale-y\":{ } separately.",
+            "example": "\"standard\" | \"currency\""
+        },
+        {
+            "name": "ref-anglerefAngle",
+            "type": "Numeric",
+            "desc": "Provides the ability to rotate the chart.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "reference",
+            "type": "String",
+            "desc": "Piano chart only.  Sets the value (default 'plot-max') which is used as a reference for calculating node aspect.",
+            "example": "\"plot-max\" | \"plot-total\" | \"chart-max\" | \"chart-total\""
+        },
+        {
+            "name": "sampling-stepsamplingStep",
+            "type": "Numeric",
+            "desc": "By default ZingChart uses sampling when rendering large datasets.  If you are trying to render 10000 data points on a chart which is only 500px wide there is not enough space for each data point.  ZingChart will automatically determine which data points to show.  The \"sampling-step\": attribute allows you to set the step for sampling.  For example if you have 10000 data points and set \"sampling-step\":10 it will show point 1,10,20,...  Also note the \"exact\":true attribute if you want to force all data points.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "scales",
+            "type": "String",
+            "desc": "Specifies the scales used by the series item.",
+            "example": "scale-x,scale-y | scale-x,scale-y-2 | ..."
+        },
+        {
+            "name": "scaling",
+            "type": "String",
+            "desc": "When using bubble charts \"scaling\": sets the method used to relate the bubble numerical value to it's aspect.",
+            "example": "\"radius\" | \"sqrt\" | \"area\""
+        },
+        {
+            "name": "scroll-step-multiplierscrollStepMultiplier",
+            "type": "Numeric",
+            "desc": "When scrolling is enabled for a chart, ZingChart automatically samples the data in order to maintain performance during the re-rendering of the chart that occurs during scrolling.  By default, ZingChart will automatically sample every other item (scroll-step-multiplier:2).  Setting scroll-step-multiplier to 1 will force the library to sample every data point, essentially disabling sampling.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "selected-markerselectedMarker",
+            "type": "Object",
+            "desc": "Sets the styling for markers which have been selected",
+            "example": "{...}"
+        },
+        {
+            "name": "selected-stateselectedState",
+            "type": "Object",
+            "desc": "This object sets the style for plots when using background-mode and selection mode.  The plots which are included within the \"selection\":[1,5,9,...] will inherit their style from the \"selected-state\":{ } object",
+            "example": "{...}"
+        },
+        {
+            "name": "selection-modeselectionMode",
+            "type": "String",
+            "desc": "Setting the selection mode will determine how and what can be selected on a chart.  \"none\" prevents selection on the chart. \"plot\" allows you to select one node per plot.  \"graph\" allows you to select on node per graph.  \"multiple\" allows selection of anything.",
+            "example": "\"none\" | \"plot\" | \"graph\" | \"multiple\""
+        },
+        {
+            "name": "short",
+            "type": "Boolean",
+            "desc": "Setting \"short\":true will abbriviate long numbers such as 100000 to 1K or 1000000 to 1M.  When set within the \"plot\":{} object this change will be noticed anywhere values are pulled from series data.  This can also be used in places such as \"scale-y, scale-x, etc\"",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "short-unitshortUnit",
+            "type": "String",
+            "desc": "By default when setting \"short\":true ZingChart will round to the nearest short unit (ie 100000 to 100K and 1000000 to 1M).  You can set the short-unit and ZingChart will round all numbers to that unit.  Note when setting this within the \"plot\":{ } object the changes will only effect values which are pulled from the series values.  Things such as scale are set separately.",
+            "example": "\"k\" | \"K\" | \"m\" | \"M\" | \"b\" | \"B\""
+        },
+        {
+            "name": "size-factorsizeFactor",
+            "type": "Numeric",
+            "desc": "Bubble chart only. Sets a multiplier (default 1) used to increase/decrease the bubble size",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "slice",
+            "type": "Numeric",
+            "desc": "The \"slice\": attribute will transform a pie or 3D pie chart into a ring/donut chart.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "slice-startsliceStart",
+            "type": "Numeric",
+            "desc": "Sets the initial offset of the pie layers when making a nestedpie",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "stack",
+            "type": "Numeric",
+            "desc": "Using the \"stack\": attribute allows you to assign which plot index you want to each value set associated with when using a stacked chart.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "stacked",
+            "type": "Boolean",
+            "desc": "Setting \"stacked\":true will take each of the \"series\":[ ] value sets and stack them on top of one another",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "step-startstepStart",
+            "type": "String",
+            "desc": "Applicable on aspect=stepped, sets the location of the stepping relative to two consecutive nodes.",
+            "example": "\"before\" | \"middle\" | \"after\""
+        },
+        {
+            "name": "styles",
+            "type": "Array",
+            "desc": "\"styles\":[ ] allows you to create a list of styling attributes. The styles list is applied to each node. If a style item exists at that node index the style in the list will be applied.  This list is not cyclic.",
+            "example": "[...]"
+        },
+        {
+            "name": "thickness",
+            "type": "Numeric",
+            "desc": "Sets the thickness of pie3d charts.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "thousands-separatorthousandsSeparator",
+            "type": "String",
+            "desc": "When you set the \"thousands-separator\": attribute the punctuation which is used will be placed to separate digits which go into 1,000's 10,000's etc.  When placed in the \"plot\":{ } object this will only effect values which are pulled directly from the series data.  Objects such as \"scale-y\":{ }, \"scale-x\":{ }, etc..., will need to be set separately.",
+            "example": "\".\" | \",\" | ..."
+        },
+        {
+            "name": "tooltip",
+            "type": "Object",
+            "desc": "Allows you to customize tooltips that appear on data mouseover. See tooltip for more information on how to set tooltips.",
+            "example": "{...}"
+        },
+        {
+            "name": "tooltip-texttooltipText",
+            "type": "String",
+            "desc": "Using the \"tooltip-text\":\" \" attribute allows you to set text for tooltips.  This can also be done using a variety of other tokens",
+            "example": "\"Some Text\" | ..."
+        },
+        {
+            "name": "type",
+            "type": "String",
+            "desc": "Sets the type of chart specific to each series when creating a mixed chart.",
+            "example": "\"bar\" | \"hbar\" | \"line\" | \"area\""
+        },
+        {
+            "name": "value-boxvalueBox",
+            "type": "Object",
+            "desc": "Including the \"value-box\":{ } object will place fixed text above each value plotted on the chart.  By default this text is the value of the plot, however this can be changed to include tokens, text, etc.",
+            "example": "{...}"
+        },
+        {
+            "name": "z-endzEnd",
+            "type": "Numeric",
+            "desc": "Sets the z-axis end point on 3d charts.",
+            "example": "10 | \"10px\" | ..."
+        },
+        {
+            "name": "z-startzStart",
+            "type": "Numeric",
+            "desc": "Sets the z-axis start point on 3d charts.",
+            "example": "10 | \"10px\" | ..."
+        },
+        {
+            "name": "alpha",
+            "type": "Numeric",
+            "desc": "Sets the transparency of the object. Values must range between 0.0 and 1.0, with 0.0 being completely invisible and 1.0 being completely opaque. Please note that values also require the leading 0 before the decimal.",
+            "example": "0.3 | 0.9 | ..."
+        },
+        {
+            "name": "background-colorbackgroundColor",
+            "type": "String",
+            "desc": "Sets the background color of the object.  Colors can be entered by name (e.g. \"red\", \"blue\", \"yellow\"), in hexadecimal notation (e.g. \"#FF0000\", \"#0000FF\", \"#FFFF00\"), or in RGB notation (e.g. \"rgb(255,0,0)\", \"rgb(0,0,255)\", \"rgb(255,255,0)\").  One color will set a solid background color, two colors will, by default, create a horizontal gradient.  For more complex gradients, use gradient-colors and gradient-stops.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "background-color-1backgroundColor1",
+            "type": "String",
+            "desc": "Sets the first color of a 2 color background gradient of the object.  To be used with background-color-2.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "background-color-2backgroundColor2",
+            "type": "String",
+            "desc": "Sets the second color of a 2 color background gradient of the object.  To be used with background-color-1.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "background-fitbackgroundFit",
+            "type": "String",
+            "desc": "Sets the direction/s on which the background image is being \"stretched\".",
+            "example": "\"x\" | \"y\" | \"xy\""
+        },
+        {
+            "name": "background-imagebackgroundImage",
+            "type": "String",
+            "desc": "Sets a background image for the object. Value can be a local file or a web image's location.",
+            "example": "\"image.png\" | ..."
+        },
+        {
+            "name": "background-positionbackgroundPosition",
+            "type": "String",
+            "desc": "Sets the position of the background when the background-repeat value is no-repeat.",
+            "example": "\"0 0\" | \"50 100\" | \"80% 60%\" | ..."
+        },
+        {
+            "name": "background-repeatbackgroundRepeat",
+            "type": "String",
+            "desc": "Sets the repeating mode for the background image.",
+            "example": "\"no-repeat\" | \"repeat\" | \"repeat-x\" | \"repeat-y\""
+        },
+        {
+            "name": "border-colorborderColor",
+            "type": "String",
+            "desc": "Sets the border color of the object, applicable on closed shapes. See also line-color for closed shapes.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "border-radiusborderRadius",
+            "type": "Mixed",
+            "desc": "Sets the object's border radius, for rounded corners.  Larger values create rounder corners, while smaller values create sharper corners.  A single value will affect all 4 corners, while multiple values will have separate effects on each corner, with the first value affecting the top-left corner, the second value affecting the top-right corner, and so on, in a clockwise direction. A negative value will cut a corner off without rounding.",
+            "example": "4 | \"6px\" | \"6px 10px 3px 5px\" | \"-10px\" | ..."
+        },
+        {
+            "name": "border-radius-bottom-leftborderRadiusBottomLeft",
+            "type": "Mixed",
+            "desc": "Sets the object's bottom-left border radius, for rounded corners.  Larger values create rounder corners, while smaller values create sharper corners.  A negative value will cut a corner off without rounding.",
+            "example": "4 | \"6px\" | \"-6px\" | -4 | ..."
+        },
+        {
+            "name": "border-radius-bottom-rightborderRadiusBottomRight",
+            "type": "Mixed",
+            "desc": "Sets the object's bottom-right border radius, for rounded corners.  Larger values create rounder corners, while smaller values create sharper corners.  A negative value will cut a corner off without rounding.",
+            "example": "4 | \"6px\" | \"-6px\" | -4 | ..."
+        },
+        {
+            "name": "border-radius-top-leftborderRadiusTopLeft",
+            "type": "Mixed",
+            "desc": "Sets the object's top-left border radius, for rounded corners.  Larger values create rounder corners, while smaller values create sharper corners.  A negative value will cut a corner off without rounding.",
+            "example": "4 | \"6px\" | \"-6px\" | -4 | ..."
+        },
+        {
+            "name": "border-radius-top-rightborderRadiusTopRight",
+            "type": "Mixed",
+            "desc": "Sets the object's top-right border radius, for rounded corners.  Larger values create rounder corners, while smaller values create sharper corners.  A negative value will cut a corner off without rounding.",
+            "example": "4 | \"6px\" | \"-6px\" | -4 | ..."
+        },
+        {
+            "name": "border-widthborderWidth",
+            "type": "Mixed",
+            "desc": "Sets the border width of the object, applicable on closed shapes. See also line-width for closed shapes.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "callout",
+            "type": "Boolean",
+            "desc": "Sets whether an object will have a callout arrow or not.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "callout-heightcalloutHeight",
+            "type": "Mixed",
+            "desc": "Sets the height of the object's callout arrow.  A larger value will create a taller callout arrow.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "callout-hookcalloutHook",
+            "type": "Array",
+            "desc": "Sets the point of the tip of the callout arrow to a specified coordinate on the chart, with the starting point of [0,0] being the top left corner of the chart.",
+            "example": "[200, 50] | ..."
+        },
+        {
+            "name": "callout-offsetcalloutOffset",
+            "type": "Mixed",
+            "desc": "Sets the offset along the callout direction of the arrow's base.  Positive and negative values can be used to offset the callout arrow up, down, left, or right depending on the callout-position.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "callout-positioncalloutPosition",
+            "type": "String",
+            "desc": "Sets the position for the object's callout arrow.  The position is \"bottom\" by default.",
+            "example": "\"top\" | \"right\" | \"bottom\" | \"left\""
+        },
+        {
+            "name": "callout-widthcalloutWidth",
+            "type": "Mixed",
+            "desc": "Sets the width of the object's callout arrow.  A larger value will create a wider callout arrow.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "fill-anglefillAngle",
+            "type": "Numeric",
+            "desc": "Sets the angle of the axis along which the linear gradient is drawn.",
+            "example": "-45 | 115 | ..."
+        },
+        {
+            "name": "fill-offset-xfillOffsetX",
+            "type": "Mixed",
+            "desc": "Sets an X offset to apply to the fill.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "fill-offset-yfillOffsetY",
+            "type": "Mixed",
+            "desc": "Sets an Y offset to apply to the fill.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "fill-typefillType",
+            "type": "String",
+            "desc": "Sets the background gradient fill type to either linear or radial.",
+            "example": "\"linear\" | \"radial\""
+        },
+        {
+            "name": "gradient-colorsgradientColors",
+            "type": "String",
+            "desc": "Sets a set of colors for a complex background gradient consisting of 2 or more colors. To be used with gradient-stops.",
+            "example": "\"#f00 #0f0 #00f\" | ..."
+        },
+        {
+            "name": "gradient-stopsgradientStops",
+            "type": "String",
+            "desc": "Sets the gradient stops for a complex background gradient consisting of 2 or more colors. To be used with gradient-colors.",
+            "example": "\"0.1 0.5 0.9\" | ..."
+        },
+        {
+            "name": "line-colorlineColor",
+            "type": "String",
+            "desc": "Sets the line color of the object, applicable on non-closed shapes. See also border-color for closed shapes.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "line-gap-sizelineGapSize",
+            "type": "Mixed",
+            "desc": "Can be used to create custom dashed or dotted lines when used with line-segment-size.  This will control the size of the gaps between each line segment.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "line-segment-sizelineSegmentSize",
+            "type": "Mixed",
+            "desc": "Can be used to create custom dashed or dotted lines when used with line-gap-size.  This will control the size of the visible segment of line.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "line-stylelineStyle",
+            "type": "String",
+            "desc": "Sets the style applied to lines and borders of the object.",
+            "example": "\"solid\" | \"dotted\" | \"dashed\""
+        },
+        {
+            "name": "line-widthlineWidth",
+            "type": "Mixed",
+            "desc": "Sets the line width of the object, applicable on non-closed shapes. See also border-width for closed shapes.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "offset-xoffsetX",
+            "type": "Mixed",
+            "desc": "Sets an X offset to apply when positioning the object/shape.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "offset-yoffsetY",
+            "type": "Mixed",
+            "desc": "Sets a Y offset to apply when positioning the object/shape.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "shadow",
+            "type": "Boolean",
+            "desc": "Sets whether the object's shadow is visible or not.  Has limited effect on HTML5 implementation.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "shadow-alphashadowAlpha",
+            "type": "Numeric",
+            "desc": "Sets the transparency of the shadow of the object. Values must range between 0.0 and 1.0, with 0.0 being completely invisible and 1.0 being completely opaque. Please note that values also require the leading 0 before the decimal.",
+            "example": "0.3 | 0.9 | ..."
+        },
+        {
+            "name": "shadow-angleshadowAngle",
+            "type": "Numeric",
+            "desc": "Sets the angle of the shadow underneath the object.",
+            "example": "-45 | 115 | ..."
+        },
+        {
+            "name": "shadow-blurshadowBlur",
+            "type": "Mixed",
+            "desc": "Sets the blur effect size for the shadow of the object. Has limited effect on HTML5 implementation.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "shadow-colorshadowColor",
+            "type": "String",
+            "desc": "Sets the color of the shadow of the object.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "shadow-distanceshadowDistance",
+            "type": "Mixed",
+            "desc": "Sets the distance between the shadow and the object.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "target",
+            "type": "String",
+            "desc": "Sets the url's target for the link associated with the object. Use with \"url\".",
+            "example": "\"_blank\" | ..."
+        },
+        {
+            "name": "url",
+            "type": "String",
+            "desc": "Sets the URL for the link associated with the object.",
+            "example": "\"http://www.domain.com/link.php\" | \"link.asp\" | ..."
+        },
+        {
+            "name": "visible",
+            "type": "Boolean",
+            "desc": "Sets the visibility of the object.  Allows you to turn off the object without removing lines of JSON.",
+            "example": "true | false | 1 | 0"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "name": "behaviors",
+    "type": "gui-objects",
+    "desc": "Allows adjustments to context-menu drop down items to be set. Can be used to disable default menu items or modify their text. In this demo we have disabled the print item and changed the text of the reload item. To add custom items with custom behavior, create 'custom-items' under 'context-menu'.",
+    "attrs": [
+        {
+            "name": "enabled",
+            "type": "String",
+            "desc": "Specifies if the menu item is enabled or not. If you would like to remove all menu-items, see the 'empty' attribute of 'context-menu' below. Another option is to specify visibility as false in context-menu.",
+            "example": "\"all\" | \"none\""
+        },
+        {
+            "name": "group-namegroupName",
+            "type": "String",
+            "desc": "Determines the placement of the menu item.",
+            "example": ""
+        },
+        {
+            "name": "id",
+            "type": "String",
+            "desc": "Specifies the ID of the menu item that needs to be accessed.",
+            "example": "\"3D\" | \"LogScale\" | \"LinearScale\" | ..."
+        },
+        {
+            "name": "text",
+            "type": "String",
+            "desc": "Sets the text for the menu item.",
+            "example": "\"New Menu Item\" | ..."
+        },
+        {
+            "name": "rtl (right-to-left)",
+            "type": "Boolean",
+            "desc": "Renders text right-to-left. Default value is false.",
+            "example": "true | false | 1 | 0"
+        }
+    ]
+}

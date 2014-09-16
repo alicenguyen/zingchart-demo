@@ -1,0 +1,43 @@
+{
+    "name": "context-menu",
+    "type": "gui-objects",
+    "desc": "Allows the user to customize the context-menu, which is the drop-down menu that appears when users right click on a chart or when mobile device users tap the context-menu button.",
+    "attrs": [
+        {
+            "name": "button",
+            "type": "Object",
+            "desc": "Sets the styling for the context-menu button that will appear when a chart is viewed on mobile devices.",
+            "example": "{...}"
+        },
+        {
+            "name": "custom-itemscustomItems",
+            "type": "Array",
+            "desc": "Sets a collection of custom-menu items on the context menu.  Right click the chart in the demo and take notice of the \"Run My JavaScript\" button at the bottom of the context-menu.",
+            "example": "[...]"
+        },
+        {
+            "name": "empty",
+            "type": "Boolean",
+            "desc": "Empties all default context-menu items, leaving just the \"About ZingChart\" button.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "gear",
+            "type": "Object",
+            "desc": "Sets the styling for the gear icon that appears by default in the context-menu button on mobile devices.",
+            "example": "{...}"
+        },
+        {
+            "name": "item",
+            "type": "Object",
+            "desc": "Sets the styling for the context-menu items.",
+            "example": "{...}"
+        },
+        {
+            "name": "visible",
+            "type": "Boolean",
+            "desc": "Setting this attribute to 0 or false will disable the context-menu.",
+            "example": "true | false | 1 | 0"
+        }
+    ]
+}

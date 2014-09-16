@@ -1,0 +1,421 @@
+{
+    "name": "legend",
+    "type": "graph-objects",
+    "desc": "Including the \"legend\":{} object will include a legend in the chart.",
+    "attrs": [
+        {
+            "name": "adjust-layoutadjustLayout",
+            "type": "Boolean",
+            "desc": "Forces the plotarea to consider the legend positioning and prevent overlapping with it.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "drag-handlerdragHandler",
+            "type": "String",
+            "desc": "Sets the handler used to drag the legend: icon will create a dragging icon on the legend header, which will be the only area on which you can click and drag, header will make the whole header object active for dragging the legend.",
+            "example": "\"header\" | \"icon\""
+        },
+        {
+            "name": "draggable",
+            "type": "Boolean",
+            "desc": "Sets whether the legend can be dragged or not.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "footer",
+            "type": "Object",
+            "desc": "Sets the styling for the legend footer.",
+            "example": "{...}"
+        },
+        {
+            "name": "header",
+            "type": "Object",
+            "desc": "Sets the styling for the legend header.",
+            "example": "{...}"
+        },
+        {
+            "name": "icon",
+            "type": "Object",
+            "desc": "Sets the styling for the legend icons (minimize/maximize and drag).",
+            "example": ""
+        },
+        {
+            "name": "item",
+            "type": "Object",
+            "desc": "Sets the styling for the active legend items.",
+            "example": "{...}"
+        },
+        {
+            "name": "item-offitemOff",
+            "type": "Object",
+            "desc": "Sets the styling for the inactive legend items.",
+            "example": "{...}"
+        },
+        {
+            "name": "layout",
+            "type": "String",
+            "desc": "Sets the layout for the legend items.",
+            "example": "\"horizontal\" | \"h\" | \"vertical\" | \"v\" | \"row x col\" | \"x col\" | \"row x\" | \"float\""
+        },
+        {
+            "name": "marker",
+            "type": "Object",
+            "desc": "Sets the syling for the legend markers.",
+            "example": "{...}"
+        },
+        {
+            "name": "max-itemsmaxItems",
+            "type": "Numeric",
+            "desc": "Sets the maximum number of items displayed on the legend. To be used with overflow.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "minimize",
+            "type": "Boolean",
+            "desc": "Sets whether the legend can be minimized or not.",
+            "example": ""
+        },
+        {
+            "name": "overflow",
+            "type": "String",
+            "desc": "Sets the display mode for legend items beyond max-items setting: none will display all items, hidden will display just top max-items items, page will enable the pagination module, with top max-items items per page. To be used with max-item.",
+            "example": "\"none\" | \"hidden\" | \"page\""
+        },
+        {
+            "name": "page-offpageOff",
+            "type": "Object",
+            "desc": "Sets the styling for the inactive page navigation object (previous and next arrows).",
+            "example": "{...}"
+        },
+        {
+            "name": "page-onpageOn",
+            "type": "Object",
+            "desc": "Sets the styling for the active page navigation object (previous and next arrows).",
+            "example": "{...}"
+        },
+        {
+            "name": "page-statuspageStatus",
+            "type": "Object",
+            "desc": "Sets the styling for the page status text.",
+            "example": "{...}"
+        },
+        {
+            "name": "shared",
+            "type": "boolean",
+            "desc": "For graphsets with multiple chart objects, setting this attribute to true within the legend object of each chart will allow you to use one legend to toggle data on or off for each chart simultaneously. It should be noted that while each chart must have a legend object, the visible attribute can be set to false to hide a legend.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "toggle-actiontoggleAction",
+            "type": "String",
+            "desc": "Sets the action performed on legend item toggle: hide will simply hide the respective plot, remove will repaint the chart without consodering the respective plot, disabled will not generate any action for the legend items/markers.",
+            "example": "\"hide\" | \"remove\" | \"disabled\""
+        },
+        {
+            "name": "alpha",
+            "type": "Numeric",
+            "desc": "Sets the transparency of the object. The higher the value, the less transparent the object appears.  Requires the formatting 0.x.",
+            "example": "0.3 | 0.9 | ..."
+        },
+        {
+            "name": "background-colorbackgroundColor",
+            "type": "String",
+            "desc": "Sets the background color of the object.  Colors can be entered by name (e.g. \"red\", \"blue\", \"yellow\"), in hexadecimal notation (e.g. \"#FF0000\", \"#0000FF\", \"#FFFF00\"), or in RGB notation (e.g. \"rgb(255,0,0)\", \"rgb(0,0,255)\", \"rgb(255,255,0)\").  One color will set a solid background color, two colors will, by default, create a horizontal gradient.  For more complex gradients, use gradient-colors and gradient-stops.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "background-color-1backgroundColor1",
+            "type": "String",
+            "desc": "Sets the first color of a 2 color background gradient of the object.  To be used with background-color-2.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "background-color-2backgroundColor2",
+            "type": "String",
+            "desc": "Sets the second color of a 2 color background gradient of the object.  To be used with background-color-1.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "background-fitbackgroundFit",
+            "type": "String",
+            "desc": "Sets the direction/s on which the background image is being \"stretched\".",
+            "example": "\"x\" | \"y\" | \"xy\""
+        },
+        {
+            "name": "background-imagebackgroundImage",
+            "type": "String",
+            "desc": "Sets a background image for the object. Value can be a local file or a web image's location.",
+            "example": "\"image.png\" | ..."
+        },
+        {
+            "name": "background-positionbackgroundPosition",
+            "type": "String",
+            "desc": "Sets the position of the background when the background-repeat value is no-repeat.",
+            "example": "\"0 0\" | \"50 100\" | \"80% 60%\" | ..."
+        },
+        {
+            "name": "background-repeatbackgroundRepeat",
+            "type": "String",
+            "desc": "Sets the repeating mode for the background image.",
+            "example": "\"no-repeat\" | \"repeat\" | \"repeat-x\" | \"repeat-y\""
+        },
+        {
+            "name": "border-bottomborderBottom",
+            "type": "String",
+            "desc": "Sets the object's bottom border style. Accepts solid, dotted, and dashed. Also accepts named colors. If color is not set properly, will default to black.",
+            "example": "\"2px solid #f00\" | ..."
+        },
+        {
+            "name": "border-colorborderColor",
+            "type": "String",
+            "desc": "Sets the border color of the object, applicable on closed shapes. See also line-color for closed shapes.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "border-leftborderLeft",
+            "type": "String",
+            "desc": "Sets the object's left border style.   Accepts solid, dashed, and dotted styles.",
+            "example": "\"2px solid #f00\" | ..."
+        },
+        {
+            "name": "border-radiusborderRadius",
+            "type": "Mixed",
+            "desc": "Sets the object's border radius, for rounded corners.  The higher the value, the more rounded the corners appear.",
+            "example": "4 | \"6px\" | \"6px 10px 3px 5px\" | \"-10px\" | ..."
+        },
+        {
+            "name": "border-radius-bottom-leftborderRadiusBottomLeft",
+            "type": "Mixed",
+            "desc": "Sets the object's bottom-left border radius, for rounded corners.  Larger values create rounder corners, while smaller values create sharper corners.  A negative value will cut a corner off without rounding.",
+            "example": "4 | \"6px\" | \"-6px\" | -4 | ..."
+        },
+        {
+            "name": "border-radius-bottom-rightborderRadiusBottomRight",
+            "type": "Mixed",
+            "desc": "Sets the object's bottom-right border radius, for rounded corners.  Larger values create rounder corners, while smaller values create sharper corners.  A negative value will cut a corner off without rounding.",
+            "example": "4 | \"6px\" | \"-6px\" | -4 | ..."
+        },
+        {
+            "name": "border-radius-top-leftborderRadiusTopLeft",
+            "type": "Mixed",
+            "desc": "Sets the object's top-left border radius, for rounded corners.  Larger values create rounder corners, while smaller values create sharper corners.  A negative value will cut a corner off without rounding.",
+            "example": "4 | \"6px\" | \"-6px\" | -4 | ..."
+        },
+        {
+            "name": "border-radius-top-rightborderRadiusTopRight",
+            "type": "Mixed",
+            "desc": "Sets the object's top-right border radius, for rounded corners.  Larger values create rounder corners, while smaller values create sharper corners.  A negative value will cut a corner off without rounding.",
+            "example": "4 | \"6px\" | \"-6px\" | -4 | ..."
+        },
+        {
+            "name": "border-rightborderRight",
+            "type": "String",
+            "desc": "Sets the object's right border style.  Accepts solid, dashed, and dotted styles.",
+            "example": "\"2px solid #f00\" | ..."
+        },
+        {
+            "name": "border-topborderTop",
+            "type": "String",
+            "desc": "Sets the object's top border style.  Values must include the border width, style, and color.  Accepts solid, dashed, and dotted styles.",
+            "example": "\"2px solid #f00\" | ..."
+        },
+        {
+            "name": "border-widthborderWidth",
+            "type": "Mixed",
+            "desc": "Sets the border width of the object, applicable on closed shapes. See also line-width for closed shapes.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "callout",
+            "type": "Boolean",
+            "desc": "Sets whether an object will have a callout arrow or not.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "callout-extensioncalloutExtension",
+            "type": "Mixed",
+            "desc": "Sets the length for an extension line off the tip of the callout arrow.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "callout-heightcalloutHeight",
+            "type": "Mixed",
+            "desc": "Sets the height of the object's callout arrow.  A larger value will create a taller callout arrow.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "callout-hookcalloutHook",
+            "type": "Array",
+            "desc": "Sets a location for the point of the tip of the callout arrow.  Uses XY coordinates.",
+            "example": "[200, 50] | ..."
+        },
+        {
+            "name": "callout-offsetcalloutOffset",
+            "type": "Mixed",
+            "desc": "Sets the offset for the origin of the callout arrow.  Uses positive or negative values to move the arrow right/left/up/down.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "callout-positioncalloutPosition",
+            "type": "String",
+            "desc": "Sets the position for the object's callout arrow.  The position is \"bottom\" by default.",
+            "example": "\"top\" | \"right\" | \"bottom\" | \"left\""
+        },
+        {
+            "name": "callout-widthcalloutWidth",
+            "type": "Mixed",
+            "desc": "Sets which edge will be the location for the object's callout arrow.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "fill-anglefillAngle",
+            "type": "Numeric",
+            "desc": "Sets the angle of the axis along which the linear gradient is drawn.",
+            "example": "-45 | 115 | ..."
+        },
+        {
+            "name": "fill-offset-xfillOffsetX",
+            "type": "Mixed",
+            "desc": "Sets an X offset to apply to the fill.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "fill-offset-yfillOffsetY",
+            "type": "Mixed",
+            "desc": "Sets an Y offset to apply to the fill.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "fill-typefillType",
+            "type": "String",
+            "desc": "Sets the background gradient fill type to either linear or radial.",
+            "example": "\"linear\" | \"radial\""
+        },
+        {
+            "name": "gradient-colorsgradientColors",
+            "type": "String",
+            "desc": "Sets a set of colors for a complex background gradient (more than 2 colors).  To be used with gradient-stops.",
+            "example": "\"#f00 #0f0 #00f\" | ..."
+        },
+        {
+            "name": "gradient-stopsgradientStops",
+            "type": "String",
+            "desc": "Sets the position for the introduction of each color for a complex background gradient (more than 2 colors).  To be used with gradient-colors.",
+            "example": "\"0.1 0.5 0.9\" | ..."
+        },
+        {
+            "name": "height",
+            "type": "Mixed",
+            "desc": "Sets the object's height.",
+            "example": "10 | \"20px\" | 0.3 | \"30%\" | ..."
+        },
+        {
+            "name": "margin",
+            "type": "Mixed",
+            "desc": "Sets the object's margin/s from the top-left of the chart.",
+            "example": "10 | \"5px\" | \"10 20\" | \"5px 10px 15px 20px\" | ..."
+        },
+        {
+            "name": "margin-bottommarginBottom",
+            "type": "Mixed",
+            "desc": "Sets the object's bottom margin.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "margin-leftmarginLeft",
+            "type": "Mixed",
+            "desc": "Sets the object's left margin.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "margin-rightmarginRight",
+            "type": "Mixed",
+            "desc": "Sets the object's right margin.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "margin-topmarginTop",
+            "type": "Mixed",
+            "desc": "Sets the object's top margin.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "offset-xoffsetX",
+            "type": "Mixed",
+            "desc": "Sets an X offset to apply when positioning the legend.  A positive value moves the legend to the right.  A negative value moves the legend to the left.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "offset-yoffsetY",
+            "type": "Mixed",
+            "desc": "Sets a Y offset to apply when positioning the legend.  A positive value moves the legend down.  A negative value moves the legend up.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "position",
+            "type": "String",
+            "desc": "Sets the object's position relative to its container.  Similar results can be obtained by setting [margin] and [margin-...] attributes.  Uses x,y coordinates originating from the top left of the chart.",
+            "example": ""
+        },
+        {
+            "name": "shadow",
+            "type": "Boolean",
+            "desc": "Sets whether the object's shadow is visible or not.  Has limited effect on HTML5 implementation.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "shadow-alphashadowAlpha",
+            "type": "Numeric",
+            "desc": "Sets the transparency of the shadow of the object.  The higher the value, the less transparent the shadow will be.",
+            "example": "0.3 | 0.9 | ..."
+        },
+        {
+            "name": "shadow-angleshadowAngle",
+            "type": "Numeric",
+            "desc": "Sets the angle of the shadow underneath the object.",
+            "example": "-45 | 115 | ..."
+        },
+        {
+            "name": "shadow-blurshadowBlur",
+            "type": "Mixed",
+            "desc": "Sets the blur effect size for the shadow of the object. Has limited effect on HTML5 implementation.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "shadow-colorshadowColor",
+            "type": "String",
+            "desc": "Sets the color of the shadow of the object.",
+            "example": "\"none\" | \"transparent\" | \"#f00\" | \"#f00 #00f\" | \"red yellow\" | \"rgb(100, 15, 15)\" | ..."
+        },
+        {
+            "name": "shadow-distanceshadowDistance",
+            "type": "Mixed",
+            "desc": "Sets the distance between the shadow and the object.",
+            "example": "4 | \"6px\" | ..."
+        },
+        {
+            "name": "visible",
+            "type": "Boolean",
+            "desc": "Sets the visibility of the object.  Allows you to turn off the object without removing lines of JSON.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "width",
+            "type": "Mixed",
+            "desc": "Sets the object's width.",
+            "example": "10 | \"20px\" | 0.3 | \"30%\" | ..."
+        },
+        {
+            "name": "x",
+            "type": "Mixed",
+            "desc": "Sets the X position of the object.",
+            "example": "10 | \"20px\" | 0.3 | \"30%\" | ..."
+        },
+        {
+            "name": "y",
+            "type": "Mixed",
+            "desc": "Sets the Y position of the object.",
+            "example": "10 | \"20px\" | 0.3 | \"30%\" | ..."
+        }
+    ]
+}

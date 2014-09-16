@@ -1,0 +1,13 @@
+{
+    "name": "rules-abstract",
+    "type": "loader",
+    "desc": "",
+    "attrs": [
+        {
+            "name": "rule",
+            "type": "String",
+            "desc": "A rule allows you to include logic in order to apply a set of attributes only to certain aspects of your chart that meet the criteria specified within each \"rule\": group.  You can include any number of \"rule\": groups nested within a \"rules\": set.  Place the desired attribute or attributes within each \"rule\": group to apply those attributes to the areas that fulfill the requirement.  The effect of rules depends largely on the placement of the \"rules\": set within your JSON code.  In the above example, the styling attributes within each rule will be applied to the scale-y guide.",
+            "example": "\"%c == 2\" | \"%v  0\" | ..."
+        }
+    ]
+}

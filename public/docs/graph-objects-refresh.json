@@ -1,0 +1,85 @@
+{
+    "name": "refresh",
+    "type": "graph-objects",
+    "desc": "Sets the graph's automated data refresh/feed system.",
+    "attrs": [
+        {
+            "name": "adjust-scaleadjustScale",
+            "type": "Boolean",
+            "desc": "Sets how initial data from a feed is displayed as it is loaded. The default false value will maintain a fixed width for each node as it loads and will start painting the nodes from the right. The width of a node in a bar chart is the width of an individual bar, while the width of a node on a line chart determines the distance between two points with respect to the x-axis. The true option will fill the entire width of the chart as new data is loaded. That is, if up to a point a single bar has been loaded on a bar chart, that bar will fit the entire width of the graph. Once two bars have been loaded, each will fill up half of the width of the graph, etc.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "adjust-scaleadjustScale",
+            "type": "Boolean",
+            "desc": "",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "curtain",
+            "type": "Object",
+            "desc": "An object that covers the portion of the graph that has not been plotted yet. Commonly used with real time feeds to show a loading screen that opens like a \"curtain\" to reveal the fully populated graph. When this attribute is used, it will create a box to the left of the data being loaded from the right displaying information desired to be displayed to the user.",
+            "example": "{...}"
+        },
+        {
+            "name": "interval",
+            "type": "Numeric",
+            "desc": "Sets the timeout between two refresh operations. If value is smaller than 50, seconds are assumed, otherwise milliseconds are assumed.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "max-ticksmaxTicks",
+            "type": "Numeric",
+            "desc": "When dynamically feeding data, the number of data elements that are fit across the x-axis is increasing. This number input here defines the maximum number of such data points that are allowed to fit before elements are just subtracted off of the left side as they are added to the right.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "method",
+            "type": "String",
+            "desc": "",
+            "example": "\"push\" | \"pull\""
+        },
+        {
+            "name": "reset-timeoutresetTimeout",
+            "type": "Numeric",
+            "desc": "Determines how long before the graph reloads all data from the data feed, removing previous data from the feed. For values smaller than 50 seconds are assumed, otherwise milliseconds are assumed.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "stop-timeoutstopTimeout",
+            "type": "Numeric",
+            "desc": "The amount of time that data is accepted from a feed or the graph updates from source before it stops. For values less than 50 seconds are assumed, otherwise milliseconds are assumed.",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "storage",
+            "type": "Boolean",
+            "desc": "",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "storage-sizestorageSize",
+            "type": "Numeric",
+            "desc": "",
+            "example": "5 | 10 | ..."
+        },
+        {
+            "name": "transport",
+            "type": "String",
+            "desc": "",
+            "example": "\"http\" | \"websocket\""
+        },
+        {
+            "name": "type",
+            "type": "String",
+            "desc": "Sets the type of data refresh. full reloads the entire chart from the chart's original data source. feed accepts series data differences from the url provided as a data source, under the url attribute.",
+            "example": "\"full\" | \"feed\""
+        },
+        {
+            "name": "url",
+            "type": "String",
+            "desc": "Sets the url for the data feed, if feed is specified under the \"type\" attribute.",
+            "example": "\"mydatafeed.php\" | \"http://www.domain.com/mydatafeed.php\" | ..."
+        }
+    ]
+}

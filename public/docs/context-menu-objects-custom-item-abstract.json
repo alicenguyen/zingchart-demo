@@ -1,0 +1,31 @@
+{
+    "name": "custom-item-abstract",
+    "type": "context-menu-objects",
+    "desc": "Allows the user to add additional items to the context menu drop-down. This item can trigger javascript specified in its 'function' attribute specified below. Styling for all menu items can be customized using the context-menu 'item' attribute.",
+    "attrs": [
+        {
+            "name": "function",
+            "type": "String",
+            "desc": "Sets a JavaScript function/portion of code that will be executed when the respective menu item is selected.",
+            "example": "\"doSomething()\" | \"alert(1)\" | ..."
+        },
+        {
+            "name": "id",
+            "type": "String",
+            "desc": "Sets the ID of the menu item.",
+            "example": "\"myid\" | \"f1\" | ..."
+        },
+        {
+            "name": "rtl (right-to-left)",
+            "type": "Boolean",
+            "desc": "Renders text right-to-left. Default value is false.",
+            "example": "true | false | 1 | 0"
+        },
+        {
+            "name": "text",
+            "type": "String",
+            "desc": "Sets the text for the menu item.",
+            "example": "\"New Menu Item\" | ..."
+        }
+    ]
+}
